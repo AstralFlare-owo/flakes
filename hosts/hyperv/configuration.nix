@@ -3,6 +3,8 @@
     ./hardware-configuration.nix
     ../../profiles/base.nix
     ../../modules/system/graphics/gnome.nix
+    ../../modules/system/graphics/niri.nix
+    ../../modules/system/ime/fcitx.nix
   ];
 
   virtualisation.hypervGuest.enable = true;

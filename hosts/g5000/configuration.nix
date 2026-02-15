@@ -10,6 +10,8 @@
     ../../modules/system/app/steam.nix
     ../../modules/system/app/syncthing.nix
     ../../modules/system/app/gpu-screen-recorder.nix
+    ../../modules/system/graphics/niri.nix
+    ../../modules/system/ime/fcitx.nix
   ];
 
   hardware.nvidia.prime.offload = {
@@ -26,6 +28,8 @@
   services.libinput.enable = true;
 
   services.syncthing.user = "af";
+
+  services.easytier.instances.ctmc.extraArgs = [ "--hostname" "g5000.aflare" ];
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
 

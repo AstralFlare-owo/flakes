@@ -20,6 +20,7 @@
     fcitx5.waylandFrontend = true;
     fcitx5.addons = with pkgs; [
       qt6Packages.fcitx5-chinese-addons
+      qt6Packages.fcitx5-configtool
       fcitx5-gtk
       fcitx5-pinyin-zhwiki
       fcitx5-pinyin-minecraft
@@ -27,6 +28,7 @@
       (fcitx5-rime.override {
         rimeDataPkgs = with pkgs; [
           rime-ice
+          rime-data
         ];
       })
       fcitx5-material-color
@@ -40,6 +42,7 @@
         };
         "Groups/0/Items/0".Name = "keyboard-us";
         "Groups/0/Items/1".Name = "pinyin";
+        "Groups/0/Items/2".Name = "rime";
         GroupOrder."0" = "Default";
       };
     };
