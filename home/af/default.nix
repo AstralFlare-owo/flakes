@@ -39,10 +39,6 @@
     ".gitconfig".source = ./.gitconfig;
     ".zshrc".source = ./.zshrc;
     ".config/fastfetch/config.jsonc".source = ./.config/fastfetch/config.jsonc;
-    ".config/noctalia-shell/settings.json".source =
-      ./.config/noctalia-shell/settings.json;
-    ".config/noctalia/user-templates.toml".source =
-      ./.config/noctalia/user-templates.toml;
     ".config/user-dirs.dirs".source = ./.config/user-dirs.dirs;
     ".config/user-dirs.locale".source = ./.config/user-dirs.locale;
     ".config/waybar/config".source = ./.config/waybar/config;
