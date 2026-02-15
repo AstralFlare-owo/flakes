@@ -43,5 +43,6 @@
     ".config/user-dirs.locale".source = ./.config/user-dirs.locale;
     ".config/waybar/config".source = ./.config/waybar/config;
     ".config/waybar/style.css".source = ./.config/waybar/style.css;
+    ".local/share/fonts".source = ./fonts;
   };
 }
