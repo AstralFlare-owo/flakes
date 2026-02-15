@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "NoctaliaTheme",
+    "workbench.iconTheme": "material-icon-theme",
+    "chat.mcp.gallery.enabled": true,
+    "chat.disableAIFeatures": true,
+    "remote.SSH.remotePlatform": {
+        "*.gitpod.io": "linux"
+    }
+}

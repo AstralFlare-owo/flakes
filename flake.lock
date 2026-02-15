@@ -1,0 +1,128 @@
+{
+  "nodes": {
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "nur",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1733312601,
+        "narHash": "sha256-4pDvzqnegAfRkPwO3wmwBhVi/Sye1mzps0zHWYnP88c=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "205b12d8b7cd4802fbcb8e8ef6a0f1408781a4f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770779995,
+        "narHash": "sha256-Evbc+u49wYQ5uyEi/HHxVFEt3g/w4MZxkMXMe7McjRM=",
+        "ref": "refs/heads/master",
+        "rev": "b3f43db171474132528be57610bfa5fb3b766879",
+        "revCount": 6212,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/nix-community/home-manager.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/nix-community/home-manager.git"
+      }
+    },
+    "nixos-hardware": {
+      "locked": {
+        "lastModified": 1769302137,
+        "narHash": "sha256-QEDtctEkOsbx8nlFh4yqPEOtr4tif6KTqWwJ37IM2ds=",
+        "ref": "refs/heads/master",
+        "rev": "a351494b0e35fd7c0b7a1aae82f0afddf4907aa8",
+        "revCount": 2580,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/NixOS/nixos-hardware.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/NixOS/nixos-hardware.git"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1770197578,
+        "narHash": "sha256-AYqlWrX09+HvGs8zM6ebZ1pwUqjkfpnv8mewYwAo+iM=",
+        "ref": "nixos-unstable",
+        "rev": "00c21e4c93d963c50d4c0c89bfa84ed6e0694df2",
+        "revCount": 940249,
+        "type": "git",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
+      },
+      "original": {
+        "ref": "nixos-unstable",
+        "type": "git",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
+      }
+    },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770808241,
+        "narHash": "sha256-LlGtdMFW/2suVSdaNWgs2EhOvWcV6f8ZD9/WRgMW86E=",
+        "ref": "refs/heads/main",
+        "rev": "825701a57b5272cf9be06aa375a1b6437a38e814",
+        "revCount": 7818,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git"
+      }
+    },
+    "nur": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770422102,
+        "narHash": "sha256-bpuQAA5B4XLI7Q4jmSvPTWrQU+NxXUAJYgDk2me3NE8=",
+        "ref": "refs/heads/main",
+        "rev": "1a6ae54844079724012d7a5b1c4bfcfe00c3e20a",
+        "revCount": 39133,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/nix-community/NUR.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/nix-community/NUR.git"
+      }
+    },
+    "root": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixos-hardware": "nixos-hardware",
+        "nixpkgs": "nixpkgs",
+        "noctalia": "noctalia",
+        "nur": "nur"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
