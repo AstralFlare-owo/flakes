@@ -17,5 +17,5 @@ in
   };
 
   programs.noctalia-shell.user-templates =
-    lib.mkIf templatesEnabled ./.config/noctalia/user-templates.toml;
+    lib.mkIf templatesEnabled (builtins.readFile ./.config/noctalia/user-templates.toml);
 }
