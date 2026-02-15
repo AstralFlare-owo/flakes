@@ -163,7 +163,7 @@
     "screenOverrides": []
   },
   "general": {
-    "avatarImage": "/home/af/Pictures/Wallpapers/nixos-artwork/wallpapers/nixos-wallpaper-catppuccin-frappe.png",
+    "avatarImage": "/home/af/astriverse-resources/AstralFlare/avatar_v2.png",
     "dimmerOpacity": 0.2,
     "showScreenCorners": true,
     "forceBlackScreenCorners": true,
@@ -490,7 +490,7 @@
     ]
   },
   "notifications": {
-    "enabled": false,
+    "enabled": true,
     "monitors": [],
     "location": "bottom_right",
     "overlayLayer": true,
