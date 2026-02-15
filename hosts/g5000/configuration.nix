@@ -9,6 +9,7 @@
     ../../modules/system/app/kvm.nix
     ../../modules/system/app/steam.nix
     ../../modules/system/app/syncthing.nix
+    ../../modules/system/app/gpu-screen-recorder.nix
   ];
 
   hardware.nvidia.prime.offload = {
