@@ -29,6 +29,7 @@
     ../../modules/user/app/protonplus.nix
     ../../modules/user/app/snipaste.nix
     ../../modules/user/app/sub-store.nix
+    ../../modules/user/app/telegram.nix
     ../../modules/user/app/vscode.nix
     ../../modules/user/app/wechat.nix
     ../../modules/user/app/wpsoffice.nix
