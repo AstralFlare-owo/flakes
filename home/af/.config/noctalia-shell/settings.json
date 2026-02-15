@@ -81,7 +81,7 @@
           "showAlbumArt": true,
           "showArtistFirst": true,
           "showProgressRing": true,
-          "showVisualizer": false,
+          "showVisualizer": true,
           "textColor": "none",
           "useFixedWidth": false,
           "visualizerType": "linear"
@@ -292,7 +292,7 @@
   },
   "wallpaper": {
     "enabled": true,
-    "overviewEnabled": false,
+    "overviewEnabled": true,
     "directory": "/home/af/Pictures/Wallpapers",
     "monitorDirectories": [],
     "enableMultiMonitorDirectories": false,
@@ -547,14 +547,15 @@
   },
   "osd": {
     "enabled": true,
-    "location": "top_right",
+    "location": "bottom",
     "autoHideMs": 2000,
     "overlayLayer": true,
     "backgroundOpacity": 1,
     "enabledTypes": [
       0,
       1,
-      2
+      2,
+      3
     ],
     "monitors": []
   },
@@ -644,7 +645,7 @@
     "session": ""
   },
   "plugins": {
-    "autoUpdate": false
+    "autoUpdate": true
   },
   "desktopWidgets": {
     "enabled": false,
