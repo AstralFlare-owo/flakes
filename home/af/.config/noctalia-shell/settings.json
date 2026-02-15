@@ -490,7 +490,7 @@
     ]
   },
   "notifications": {
-    "enabled": true,
+    "enabled": false,
     "monitors": [],
     "location": "bottom_right",
     "overlayLayer": true,
