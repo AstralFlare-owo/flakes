@@ -82,7 +82,7 @@ let
     swap_disk = true;
     temp_scale = "celsius";
     terminal_sync = true;
-    theme_background = true;
+    theme_background = false;
     truecolor = true;
     update_ms = 500;
     use_fstab = true;
