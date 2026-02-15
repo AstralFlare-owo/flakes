@@ -545,13 +545,13 @@
     "enableDdcSupport": true
   },
   "colorSchemes": {
-    "useWallpaperColors": false,
+    "useWallpaperColors": true,
     "predefinedScheme": "Tokyo Night",
     "darkMode": true,
     "schedulingMode": "off",
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
-    "generationMethod": "tonal-spot",
+    "generationMethod": "dysfunctional",
     "monitorForColors": ""
   },
   "templates": {
@@ -585,7 +585,7 @@
         "id": "qt"
       }
     ],
-    "enableUserTheming": false
+    "enableUserTheming": true
   },
   "nightLight": {
     "enabled": false,
