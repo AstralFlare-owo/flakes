@@ -620,6 +620,14 @@
       {
         "enabled": true,
         "id": "kitty"
+      },
+      {
+        "enabled": true,
+        "id": "telegram"
+      },
+      {
+        "enabled": true,
+        "id": "yazi"
       }
     ],
     "enableUserTheming": true
