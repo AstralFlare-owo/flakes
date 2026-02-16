@@ -418,7 +418,7 @@ binds {
     Super+Shift+E hotkey-overlay-title="会话菜单：noctalia" { spawn-sh "noctalia-shell ipc call sessionMenu toggle"; }
     Super+R hotkey-overlay-title="启动器：noctalia 命令" { spawn-sh "noctalia-shell ipc call launcher command"; }
     Super+V hotkey-overlay-title="启动器：noctalia 剪贴板" { spawn-sh "noctalia-shell ipc call launcher clipboard"; }
-    Super+T hotkey-overlay-title="打开 Shell：alacritty" { spawn "alacritty"; }
+    Super+T hotkey-overlay-title="打开 Shell：kitty" { spawn "kitty"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.

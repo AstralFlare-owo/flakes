@@ -20,7 +20,6 @@ let
 in
 {
   programs.alacritty = {
-    enable = true;
     settings = finalSettings;
   };
 }

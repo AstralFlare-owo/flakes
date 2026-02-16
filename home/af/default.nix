@@ -9,6 +9,7 @@
     ./niri.nix
     ./noctalia.nix
     ./alacritty.nix
+    ./kitty.nix
     ./btop.nix
 #   ../../modules/user/graphics/mako.nix
     ../../modules/user/graphics/ozone-platform-hint-fix.nix
@@ -20,12 +21,14 @@
     ../../modules/user/runtimes/nodejs.nix
     ../../modules/user/runtimes/python313.nix
     ../../modules/user/app/abdm.nix
+#   ../../modules/user/app/alacritty.nix
     ../../modules/user/app/chrome.nix
     ../../modules/user/app/codex.nix
     ../../modules/user/app/cli-tools.nix
     ../../modules/user/app/dingtalk.nix
     ../../modules/user/app/hmcl.nix
     ../../modules/user/app/keepassxc.nix
+    ../../modules/user/app/kitty.nix
     ../../modules/user/app/linuxqq.nix
     ../../modules/user/app/lutris.nix
     ../../modules/user/app/piliplus.nix
