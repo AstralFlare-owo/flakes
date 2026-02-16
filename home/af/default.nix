@@ -16,12 +16,14 @@
     ../../modules/user/runtimes/java8.nix
     ../../modules/user/runtimes/java17.nix
     ../../modules/user/runtimes/java21.nix
+    ../../modules/user/runtimes/gcc.nix
     ../../modules/user/runtimes/nodejs.nix
     ../../modules/user/runtimes/python313.nix
     ../../modules/user/app/abdm.nix
     ../../modules/user/app/chrome.nix
     ../../modules/user/app/codex.nix
     ../../modules/user/app/dingtalk.nix
+    ../../modules/user/app/hmcl.nix
     ../../modules/user/app/keepassxc.nix
     ../../modules/user/app/linuxqq.nix
     ../../modules/user/app/lutris.nix
