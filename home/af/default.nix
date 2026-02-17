@@ -40,6 +40,7 @@
     ../../modules/user/app/wechat.nix
     ../../modules/user/app/wpsoffice.nix
     ../../modules/user/app/zsh.nix
+    ../../modules/user/app/musicfox.nix
   ];
 
   home.file = {
