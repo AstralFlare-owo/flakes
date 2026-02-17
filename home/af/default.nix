@@ -31,6 +31,7 @@
     ../../modules/user/app/kitty.nix
     ../../modules/user/app/linuxqq.nix
     ../../modules/user/app/lutris.nix
+    ../../modules/user/app/openclaw.nix
     ../../modules/user/app/piliplus.nix
     ../../modules/user/app/protonplus.nix
     ../../modules/user/app/snipaste.nix
@@ -43,8 +44,13 @@
     ../../modules/user/app/musicfox.nix
   ];
 
+  programs.git = {
+    enable = true;
+    userName = "AstralFlare-owo";
+    userEmail = "tuanzi_awa@qq.com";
+  };
+
   home.file = {
-    ".gitconfig".source = ./.gitconfig;
     ".zshrc".source = ./.zshrc;
     ".config/fastfetch/config.jsonc".source = ./.config/fastfetch/config.jsonc;
     ".config/user-dirs.dirs".source = ./.config/user-dirs.dirs;

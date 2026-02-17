@@ -73,6 +73,15 @@
     };
   };
 
+  programs.git = {
+    settings = {
+      core.pager = "delta";
+      interactive.diffFilter = "delta --color-only";
+      delta.navigate = true;
+      merge.conflictStyle = "zdiff3";
+    };
+  };
+
   programs.eza = {
     enable = true;
     enableZshIntegration = true;

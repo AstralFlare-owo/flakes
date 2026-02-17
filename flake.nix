@@ -62,6 +62,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    openclaw = {
+      # [Github]
+      url = "github:openclaw/nix-openclaw";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { self, nixpkgs, nixos-hardware, nur, home-manager, ...}@inputs:
@@ -72,6 +78,7 @@
       nur = { ... }: {
         nixpkgs.overlays = [
           inputs.nur.overlays.default
+          inputs.openclaw.overlays.default
         ];
       };
       nixpkgs = { ... }: {
