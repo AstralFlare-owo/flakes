@@ -3,10 +3,11 @@
     ./hardware-configuration.nix
     ../../profiles/base.nix
     ../../modules/system/hardware/ddcutil.nix
+    ../../modules/system/hardware/wacom.nix
     ../../modules/system/graphics/gnome.nix
     ../../modules/system/app/clash-verge-rev.nix
     ../../modules/system/app/easytier.nix
-    ../../modules/system/app/kvm.nix
+    ../../modules/system/virtualisation/kvm.nix
     ../../modules/system/app/steam.nix
     ../../modules/system/app/syncthing.nix
     ../../modules/system/app/gpu-screen-recorder.nix

@@ -1,4 +1,8 @@
 { pkgs, ... }: {
+  imports = [
+    ./virtualisation/docker.nix
+  ];
+
   boot.loader.systemd-boot.enable = true;
 
   networking.networkmanager.enable = true;
