@@ -68,6 +68,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    fix-python = {
+      # [Github]
+      url = "github:GuillaumeDesforges/fix-python";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { self, nixpkgs, nixos-hardware, nur, home-manager, ...}@inputs:
