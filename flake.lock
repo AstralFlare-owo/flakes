@@ -10,15 +10,16 @@
       "locked": {
         "lastModified": 1752329544,
         "narHash": "sha256-LtZyywexRDB5FFmEU6A1e5tMIb0MX8/xxpjCHonUzYE=",
-        "owner": "GuillaumeDesforges",
-        "repo": "fix-python",
+        "ref": "refs/heads/master",
         "rev": "248e2ea9620faee9b8a2ae10e12320de2a819fe9",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/GuillaumeDesforges/fix-python.git"
       },
       "original": {
-        "owner": "GuillaumeDesforges",
-        "repo": "fix-python",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/GuillaumeDesforges/fix-python.git"
       }
     },
     "flake-parts": {
@@ -84,15 +85,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1771269455,
-        "narHash": "sha256-BZ31eN5F99YH6vkc4AhzKGE+tJgJ52kl8f01K7wCs8w=",
+        "lastModified": 1771756436,
+        "narHash": "sha256-Tl2I0YXdhSTufGqAaD1ySh8x+cvVsEI1mJyJg12lxhI=",
         "ref": "refs/heads/master",
-        "rev": "5f1d42a97b19803041434f66681d5c44c9ae62e3",
-        "revCount": 6243,
+        "rev": "5bd3589390b431a63072868a90c0f24771ff4cbb",
+        "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/nix-community/home-manager.git"
       },
       "original": {
+        "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/nix-community/home-manager.git"
       }
@@ -123,11 +125,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1771225034,
-        "narHash": "sha256-wBQWNm+m5532KFZPz4q41NVGP7Ixak8X2vqFggNoSOY=",
+        "lastModified": 1771639217,
+        "narHash": "sha256-eidzES1s+0/Ngkw0fmLGdZ+NSN6P7RwKD0lPLYGqZoU=",
         "owner": "openclaw",
         "repo": "nix-steipete-tools",
-        "rev": "b668498d7d2e8e7d5bc74133fb82f5cd48288ac4",
+        "rev": "95ebfa73f4421144173f7060433c510a7d2d014a",
         "type": "github"
       },
       "original": {
@@ -138,33 +140,35 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1771257191,
-        "narHash": "sha256-H1l+zHq+ZinWH7F1IidpJ2farmbfHXjaxAm1RKWE1KI=",
+        "lastModified": 1771423359,
+        "narHash": "sha256-yRKJ7gpVmXbX2ZcA8nFi6CMPkJXZGjie2unsiMzj3Ig=",
         "ref": "refs/heads/master",
-        "rev": "66e1a090ded57a0f88e2b381a7d4daf4a5722c3f",
-        "revCount": 2627,
+        "rev": "740a22363033e9f1bb6270fbfb5a9574067af15b",
+        "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/NixOS/nixos-hardware.git"
       },
       "original": {
+        "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/NixOS/nixos-hardware.git"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1771008912,
-        "narHash": "sha256-gf2AmWVTs8lEq7z/3ZAsgnZDhWIckkb+ZnAo5RzSxJg=",
+        "lastModified": 1771369470,
+        "narHash": "sha256-0NBlEBKkN3lufyvFegY4TYv5mCNHbi5OmBDrzihbBMQ=",
         "ref": "nixos-unstable",
-        "rev": "a82ccc39b39b621151d6732718e3e250109076fa",
-        "revCount": 945868,
+        "rev": "0182a361324364ae3f436a63005877674cf45efb",
+        "shallow": true,
         "type": "git",
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
+        "url": "https://mirror.nju.edu.cn/git/nixpkgs.git"
       },
       "original": {
         "ref": "nixos-unstable",
+        "shallow": true,
         "type": "git",
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
+        "url": "https://mirror.nju.edu.cn/git/nixpkgs.git"
       }
     },
     "nixpkgs_2": {
@@ -190,15 +194,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1771269759,
-        "narHash": "sha256-OcSMUdOxKeCCNV+gOgZWP+BOGedi3QxxGNIbQQQsEFk=",
+        "lastModified": 1771756937,
+        "narHash": "sha256-eeF+rEdWTvlNBdSBnVpnIcKUoRtdgvQtG9RCJCbuq9Q=",
         "ref": "refs/heads/main",
-        "rev": "c33db6b999a884000e33ec2d018ef9de394bf42a",
-        "revCount": 8100,
+        "rev": "76a58bcd611264d107c575df610bd34b68c5498f",
+        "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git"
       },
       "original": {
+        "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git"
       }
@@ -211,15 +216,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1771312701,
-        "narHash": "sha256-Sp5kxid7I8J7cv44Cevnb3If1h6KGD4GG+8rWMhCa+Q=",
+        "lastModified": 1771759551,
+        "narHash": "sha256-6s6GPoexerGkUoCrdR+LSMjJnXoiYIV5Q0GVrqh7ZZs=",
         "ref": "refs/heads/main",
-        "rev": "fff0fdddf6a07736f622c3bfdb862507a37a1498",
-        "revCount": 39540,
+        "rev": "4eb896c52242049599e8a2c58aa185572db0d548",
+        "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/nix-community/NUR.git"
       },
       "original": {
+        "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/nix-community/NUR.git"
       }
@@ -234,17 +240,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1771312600,
-        "narHash": "sha256-Tu57h+WtKbLwyuUVGoaNxVB3duE6+C5XtyQamelAMAE=",
-        "owner": "openclaw",
-        "repo": "nix-openclaw",
-        "rev": "d5308d2a678d333f1d75b7d0caa6f7e83bb10ed1",
-        "type": "github"
+        "lastModified": 1771657318,
+        "narHash": "sha256-xFDNFFN5U9wtMcj1iACmoL6W4PWJeg9C0Pk2+BoY09s=",
+        "ref": "refs/heads/main",
+        "rev": "fbef2087190ccfca375b351cdaad49bcbaea721a",
+        "shallow": true,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/openclaw/nix-openclaw.git"
       },
       "original": {
-        "owner": "openclaw",
-        "repo": "nix-openclaw",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/openclaw/nix-openclaw.git"
       }
     },
     "root": {

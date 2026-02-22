@@ -20,25 +20,25 @@
     # NixOS Nixpkgs
 
     # [TUNA Mirror]
-    nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git?ref=nixos-unstable";
+    # nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git?ref=nixos-unstable&shallow=1";
     # [NJU Mirror]
-    # nixpkgs.url = "git+https://mirrors.nju.edu.cn/nixpkgs.git?ref=nixos-unstable";
+    nixpkgs.url = "git+https://mirror.nju.edu.cn/git/nixpkgs.git?ref=nixos-unstable&shallow=1";
     # [Github]
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "git+https://github.com/NixOS/nixpkgs.git?ref=nixos-unstable&shallow=1";
 
     # NixOS Hardware Configurations
 
     # [ghfast.top Mirror]
-    nixos-hardware.url = "git+https://ghfast.top/https://github.com/NixOS/nixos-hardware.git";
+    nixos-hardware.url = "git+https://ghfast.top/https://github.com/NixOS/nixos-hardware.git?shallow=1";
     # [Github]
-    # nixos-hardware.url = "github:NixOS/nixos-hardware";
+    # nixos-hardware.url = "git+https://github.com/NixOS/nixos-hardware.git?shallow=1";
 
     # Nix User Repository
     nur = {
       # [ghfast.top Mirror]
-      url = "git+https://ghfast.top/https://github.com/nix-community/NUR.git";
+      url = "git+https://ghfast.top/https://github.com/nix-community/NUR.git?shallow=1";
       # [Github]
-      # url = "github:nix-community/NUR";
+      # url = "git+https://github.com/nix-community/NUR.git?shallow=1";
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -46,31 +46,35 @@
     # Home Manager
     home-manager = {
       # [ghfast.top Mirror]
-      url = "git+https://ghfast.top/https://github.com/nix-community/home-manager.git";
+      url = "git+https://ghfast.top/https://github.com/nix-community/home-manager.git?shallow=1";
       # [Github]
-      # url = "github:nix-community/home-manager";
+      # url = "git+https://github.com/nix-community/home-manager.git?shallow=1";
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     noctalia = {
       # [ghfast.top Mirror]
-      url = "git+https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git";
+      url = "git+https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git?shallow=1";
       # [Github]
-      # url = "github:noctalia-dev/noctalia-shell";
+      # url = "git+https://github.com/noctalia-dev/noctalia-shell.git?shallow=1";
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     openclaw = {
+      # [ghfast.top Mirror]
+      url = "git+https://ghfast.top/https://github.com/openclaw/nix-openclaw.git?shallow=1";
       # [Github]
-      url = "github:openclaw/nix-openclaw";
+      # url = "git+https://github.com/openclaw/nix-openclaw.git?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     fix-python = {
+      # [ghfast.top Mirror]
+      url = "git+https://ghfast.top/https://github.com/GuillaumeDesforges/fix-python.git?shallow=1";
       # [Github]
-      url = "github:GuillaumeDesforges/fix-python";
+      # url = "git+https://github.com/GuillaumeDesforges/fix-python.git?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
