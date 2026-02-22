@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./virtualisation/docker.nix
+    ./network/bonjour.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
