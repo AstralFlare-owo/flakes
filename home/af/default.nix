@@ -31,6 +31,7 @@
     ../../modules/user/app/kitty.nix
     ../../modules/user/app/linuxqq.nix
     ../../modules/user/app/lutris.nix
+    ../../modules/user/app/localsend.nix
     ../../modules/user/app/openclaw.nix
     ../../modules/user/app/piliplus.nix
     ../../modules/user/app/protonplus.nix
