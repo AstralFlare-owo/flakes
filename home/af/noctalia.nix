@@ -6,16 +6,9 @@ let
     lib.attrByPath [ "templates" "enableUserTheming" ] false baseSettings;
 in
 {
-  imports = [
-    inputs.noctalia.homeModules.default
-  ];
-
   programs.noctalia-shell = {
-    enable = true;
-    systemd.enable = true;
     settings = baseSettings;
+    user-templates =
+      lib.mkIf templatesEnabled (builtins.readFile ./.config/noctalia/user-templates.toml);
   };
-
-  programs.noctalia-shell.user-templates =
-    lib.mkIf templatesEnabled (builtins.readFile ./.config/noctalia/user-templates.toml);
 }

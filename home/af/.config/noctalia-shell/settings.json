@@ -543,9 +543,9 @@
     ]
   },
   "notifications": {
-    "enabled": false,
+    "enabled": true,
     "enableMarkdown": false,
-    "density": "default",
+    "density": "compact",
     "monitors": [],
     "location": "bottom_right",
     "overlayLayer": true,
