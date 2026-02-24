@@ -543,7 +543,7 @@
     ]
   },
   "notifications": {
-    "enabled": true,
+    "enabled": false,
     "enableMarkdown": false,
     "density": "compact",
     "monitors": [],
