@@ -8,5 +8,7 @@
     xwayland-satellite
     swaylock
     swayidle
+    brightnessctl
+    wireplumber
   ];
 }
