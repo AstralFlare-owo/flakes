@@ -567,11 +567,11 @@
   },
   "sessionMenu": {
     "enableCountdown": true,
-    "countdownDuration": 10000,
+    "countdownDuration": 5000,
     "position": "center",
     "showHeader": true,
     "showKeybinds": true,
-    "largeButtonsStyle": true,
+    "largeButtonsStyle": false,
     "largeButtonsLayout": "grid",
     "powerOptions": [
       {
@@ -621,7 +621,7 @@
         "command": "",
         "countdownEnabled": true,
         "enabled": true,
-        "keybind": ""
+        "keybind": "0"
       }
     ]
   },
@@ -681,7 +681,7 @@
   },
   "brightness": {
     "brightnessStep": 5,
-    "enforceMinimum": true,
+    "enforceMinimum": false,
     "enableDdcSupport": true
   },
   "colorSchemes": {
