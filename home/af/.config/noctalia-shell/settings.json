@@ -329,11 +329,11 @@
     "wallhavenOrder": "desc",
     "wallhavenCategories": "111",
     "wallhavenPurity": "100",
-    "wallhavenRatios": "",
+    "wallhavenRatios": "landscape",
     "wallhavenApiKey": "",
     "wallhavenResolutionMode": "atleast",
-    "wallhavenResolutionWidth": "",
-    "wallhavenResolutionHeight": "",
+    "wallhavenResolutionWidth": "1920",
+    "wallhavenResolutionHeight": "1080",
     "sortOrder": "name",
     "favorites": [
       {
@@ -373,6 +373,19 @@
           "#d38769"
         ],
         "path": "/home/af/Pictures/Wallpapers/OHR.MtHoodOregon_ZH-CN6068357532_UHD.jpeg",
+        "useWallpaperColors": true
+      },
+      {
+        "colorScheme": "Tokyo Night",
+        "darkMode": true,
+        "generationMethod": "faithful",
+        "paletteColors": [
+          "#67dae4",
+          "#5c8fd6",
+          "#6f66cc",
+          "#fd4663"
+        ],
+        "path": "/home/af/Pictures/Wallpapers/139369087_p0.jpg",
         "useWallpaperColors": true
       }
     ]
