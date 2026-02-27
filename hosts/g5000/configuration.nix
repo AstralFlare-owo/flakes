@@ -14,6 +14,7 @@
     ../../modules/system/graphics/niri.nix
     ../../modules/system/ime/fcitx.nix
     ../../modules/system/app/obs-studio.nix
+    ../../modules/system/app/ollama.nix
   ];
 
   hardware.nvidia.prime.offload = {

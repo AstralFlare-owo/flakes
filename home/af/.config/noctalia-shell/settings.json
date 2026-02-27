@@ -335,7 +335,47 @@
     "wallhavenResolutionWidth": "",
     "wallhavenResolutionHeight": "",
     "sortOrder": "name",
-    "favorites": []
+    "favorites": [
+      {
+        "colorScheme": "Tokyo Night",
+        "darkMode": true,
+        "generationMethod": "tonal-spot",
+        "paletteColors": [
+          "#ffb2ba",
+          "#e5bdc0",
+          "#e9bf8e",
+          "#ffb4ab"
+        ],
+        "path": "/home/af/Pictures/Wallpapers/.loli-poster-fs8-4k.png",
+        "useWallpaperColors": true
+      },
+      {
+        "colorScheme": "Tokyo Night",
+        "darkMode": true,
+        "generationMethod": "dysfunctional",
+        "paletteColors": [
+          "#f9a271",
+          "#f9e671",
+          "#c8f971",
+          "#d8856c"
+        ],
+        "path": "/home/af/Pictures/Wallpapers/AstRiverse-Wp.png",
+        "useWallpaperColors": true
+      },
+      {
+        "colorScheme": "Tokyo Night",
+        "darkMode": true,
+        "generationMethod": "dysfunctional",
+        "paletteColors": [
+          "#f8a271",
+          "#f8e571",
+          "#c7f871",
+          "#d38769"
+        ],
+        "path": "/home/af/Pictures/Wallpapers/OHR.MtHoodOregon_ZH-CN6068357532_UHD.jpeg",
+        "useWallpaperColors": true
+      }
+    ]
   },
   "appLauncher": {
     "enableClipboardHistory": true,
