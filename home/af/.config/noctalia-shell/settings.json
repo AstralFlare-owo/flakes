@@ -65,7 +65,7 @@
           "colorizeIcons": false,
           "hideMode": "hidden",
           "id": "ActiveWindow",
-          "maxWidth": 145,
+          "maxWidth": 300,
           "scrollingMode": "hover",
           "showIcon": true,
           "textColor": "none",
@@ -225,9 +225,9 @@
     "allowPasswordWithFprintd": false,
     "clockStyle": "custom",
     "clockFormat": "HH:mm:ss\\nyyyy-MM-dd ",
-    "passwordChars": false,
+    "passwordChars": true,
     "lockScreenMonitors": [],
-    "lockScreenBlur": 0,
+    "lockScreenBlur": 0.5,
     "lockScreenTint": 0,
     "keybinds": {
       "keyUp": [
@@ -262,7 +262,7 @@
     "tooltipsEnabled": true,
     "panelBackgroundOpacity": 0.93,
     "panelsAttachedToBar": true,
-    "settingsPanelMode": "centered",
+    "settingsPanelMode": "attached",
     "wifiDetailsViewMode": "grid",
     "bluetoothDetailsViewMode": "grid",
     "networkPanelView": "wifi",
@@ -370,7 +370,7 @@
           "#f8a271",
           "#f8e571",
           "#c7f871",
-          "#d38769"
+          "#d38669"
         ],
         "path": "/home/af/Pictures/Wallpapers/OHR.MtHoodOregon_ZH-CN6068357532_UHD.jpeg",
         "useWallpaperColors": true
@@ -380,9 +380,9 @@
         "darkMode": true,
         "generationMethod": "faithful",
         "paletteColors": [
-          "#67dae4",
-          "#5c8fd6",
-          "#6f66cc",
+          "#5ed5df",
+          "#5588cf",
+          "#675ec2",
           "#fd4663"
         ],
         "path": "/home/af/Pictures/Wallpapers/139369087_p0.jpg",
@@ -404,7 +404,7 @@
     "terminalCommand": "alacritty -e",
     "customLaunchPrefixEnabled": false,
     "customLaunchPrefix": "",
-    "viewMode": "grid",
+    "viewMode": "list",
     "showCategories": true,
     "iconMode": "tabler",
     "showIconBackground": false,
@@ -413,7 +413,7 @@
     "enableSessionSearch": true,
     "ignoreMouseInput": false,
     "screenshotAnnotationTool": "",
-    "overviewLayer": false,
+    "overviewLayer": true,
     "density": "default"
   },
   "controlCenter": {
@@ -432,6 +432,17 @@
         },
         {
           "id": "NoctaliaPerformance"
+        },
+        {
+          "enableOnStateLogic": false,
+          "generalTooltipText": "Btop++",
+          "icon": "device-heart-monitor",
+          "id": "CustomButton",
+          "onClicked": "kitty btop",
+          "onMiddleClicked": "",
+          "onRightClicked": "",
+          "showExecTooltip": true,
+          "stateChecksJson": "[]"
         }
       ],
       "right": [
@@ -446,6 +457,25 @@
         },
         {
           "id": "NightLight"
+        },
+        {
+          "defaultSettings": {
+            "audioCodec": "opus",
+            "audioSource": "default_output",
+            "colorRange": "limited",
+            "copyToClipboard": false,
+            "directory": "",
+            "filenamePattern": "recording_yyyyMMdd_HHmmss",
+            "frameRate": "60",
+            "hideInactive": false,
+            "iconColor": "none",
+            "quality": "very_high",
+            "resolution": "original",
+            "showCursor": true,
+            "videoCodec": "h264",
+            "videoSource": "portal"
+          },
+          "id": "plugin:screen-recorder"
         }
       ]
     },
@@ -501,9 +531,9 @@
   },
   "dock": {
     "enabled": true,
-    "position": "bottom",
+    "position": "top",
     "displayMode": "auto_hide",
-    "dockType": "floating",
+    "dockType": "static",
     "backgroundOpacity": 1,
     "floatingRatio": 1,
     "size": 1,
@@ -512,11 +542,11 @@
     "pinnedApps": [],
     "colorizeIcons": false,
     "showLauncherIcon": false,
-    "launcherPosition": "end",
+    "launcherPosition": "start",
     "launcherIconColor": "none",
-    "pinnedStatic": false,
-    "inactiveIndicators": false,
-    "groupApps": false,
+    "pinnedStatic": true,
+    "inactiveIndicators": true,
+    "groupApps": true,
     "groupContextMenuMode": "extended",
     "groupClickAction": "cycle",
     "groupIndicatorStyle": "dots",
