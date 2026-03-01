@@ -401,7 +401,7 @@
     "pinnedApps": [],
     "useApp2Unit": false,
     "sortByMostUsed": true,
-    "terminalCommand": "alacritty -e",
+    "terminalCommand": "kitty -e",
     "customLaunchPrefixEnabled": false,
     "customLaunchPrefix": "",
     "viewMode": "list",
@@ -627,7 +627,7 @@
   },
   "notifications": {
     "enabled": false,
-    "enableMarkdown": false,
+    "enableMarkdown": true,
     "density": "compact",
     "monitors": [],
     "location": "bottom_right",
