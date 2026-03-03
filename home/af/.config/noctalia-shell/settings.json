@@ -753,14 +753,14 @@
     "manualSunset": "18:30"
   },
   "hooks": {
-    "enabled": false,
+    "enabled": true,
     "wallpaperChange": "",
     "darkModeChange": "",
     "screenLock": "",
     "screenUnlock": "",
     "performanceModeEnabled": "",
     "performanceModeDisabled": "",
-    "startup": "",
+    "startup": "sh -c \"fcitx5-remote -r && fcitx5 -rd\"",
     "session": ""
   },
   "plugins": {
