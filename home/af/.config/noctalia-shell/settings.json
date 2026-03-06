@@ -70,25 +70,6 @@
           "showIcon": true,
           "textColor": "none",
           "useFixedWidth": false
-        },
-        {
-          "compactMode": false,
-          "compactShowAlbumArt": true,
-          "compactShowVisualizer": false,
-          "hideMode": "hidden",
-          "hideWhenIdle": false,
-          "id": "MediaMini",
-          "maxWidth": 145,
-          "panelShowAlbumArt": true,
-          "panelShowVisualizer": true,
-          "scrollingMode": "hover",
-          "showAlbumArt": true,
-          "showArtistFirst": true,
-          "showProgressRing": true,
-          "showVisualizer": true,
-          "textColor": "none",
-          "useFixedWidth": false,
-          "visualizerType": "linear"
         }
       ],
       "center": [
@@ -121,6 +102,25 @@
           "hidePassive": false,
           "id": "Tray",
           "pinned": []
+        },
+        {
+          "compactMode": false,
+          "compactShowAlbumArt": true,
+          "compactShowVisualizer": false,
+          "hideMode": "hidden",
+          "hideWhenIdle": false,
+          "id": "MediaMini",
+          "maxWidth": 145,
+          "panelShowAlbumArt": true,
+          "panelShowVisualizer": true,
+          "scrollingMode": "hover",
+          "showAlbumArt": true,
+          "showArtistFirst": true,
+          "showProgressRing": true,
+          "showVisualizer": true,
+          "textColor": "none",
+          "useFixedWidth": false,
+          "visualizerType": "linear"
         },
         {
           "hideWhenZero": false,
@@ -180,6 +180,10 @@
             "removeMargins": false
           },
           "id": "plugin:privacy-indicator"
+        },
+        {
+          "iconColor": "error",
+          "id": "SessionMenu"
         },
         {
           "colorizeDistroLogo": false,
