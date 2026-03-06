@@ -1,5 +1,27 @@
 {
   "nodes": {
+    "dms": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "quickshell": "quickshell"
+      },
+      "locked": {
+        "lastModified": 1772770107,
+        "narHash": "sha256-n9M5XYpSzmNY7jz8mftGQ3DYb2hFCKrfM/FqkwsUUfo=",
+        "ref": "refs/heads/master",
+        "rev": "1eca9b4c2cc1972d01bdb332a3e2668337c88459",
+        "shallow": true,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/AvengeMedia/DankMaterialShell.git"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/AvengeMedia/DankMaterialShell.git"
+      }
+    },
     "fix-python": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -254,8 +276,31 @@
         "url": "https://ghfast.top/https://github.com/openclaw/nix-openclaw.git"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "dms",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1766725085,
+        "narHash": "sha256-O2aMFdDUYJazFrlwL7aSIHbUSEm3ADVZjmf41uBJfHs=",
+        "ref": "refs/heads/master",
+        "rev": "41828c4180fb921df7992a5405f5ff05d2ac2fff",
+        "revCount": 715,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/quickshell/quickshell"
+      },
+      "original": {
+        "rev": "41828c4180fb921df7992a5405f5ff05d2ac2fff",
+        "type": "git",
+        "url": "https://git.outfoxxed.me/quickshell/quickshell"
+      }
+    },
     "root": {
       "inputs": {
+        "dms": "dms",
         "fix-python": "fix-python",
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",

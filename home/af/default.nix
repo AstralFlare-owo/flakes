@@ -45,6 +45,7 @@
     ../../modules/user/app/zsh.nix
     ../../modules/user/app/musicfox.nix
     ../../modules/user/graphics/noctalia-shell.nix
+    ../../modules/user/graphics/dank-material-shell.nix
   ];
 
   programs.git = {

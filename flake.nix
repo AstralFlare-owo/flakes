@@ -78,6 +78,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    dms = {
+      # [ghfast.top Mirror]
+      url = "git+https://ghfast.top/https://github.com/AvengeMedia/DankMaterialShell.git?shallow=1";
+      # [Github]
+      # url = "git+https://github.com/AvengeMedia/DankMaterialShell.git?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { self, nixpkgs, nixos-hardware, nur, home-manager, ...}@inputs:
