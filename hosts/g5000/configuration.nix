@@ -12,6 +12,7 @@
     ../../modules/system/app/syncthing.nix
     ../../modules/system/app/gpu-screen-recorder.nix
     ../../modules/system/graphics/niri.nix
+    ../../modules/system/graphics/dms.nix
     ../../modules/system/ime/fcitx.nix
     ../../modules/system/app/obs-studio.nix
     ../../modules/system/app/ollama.nix

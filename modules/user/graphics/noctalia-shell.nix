@@ -1,10 +1,7 @@
-{ inputs, ... }: {
-  imports = [
-    inputs.noctalia.homeModules.default
-  ];
+{ inputs, config, lib, ... }: {
+  imports = [ inputs.noctalia.homeModules.default ];
 
-  programs.noctalia-shell = {
-    enable = true;
-    systemd.enable = true;
+  config = lib.mkIf config.programs.noctalia-shell.enable {
+    programs.noctalia-shell.systemd.enable = lib.mkDefault true;
   };
 }
