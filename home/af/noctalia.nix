@@ -1,6 +1,6 @@
 { config, inputs, lib, ... }:
 let
-  enabled = config.programs.noctalia-shell.enable;
+  enabled = lib.attrByPath [ "programs" "noctalia-shell" "enable" ] false config;
   baseSettings =
     builtins.fromJSON (builtins.readFile ./.config/noctalia-shell/settings.json);
   templatesEnabled =

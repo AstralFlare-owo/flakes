@@ -1,7 +1,7 @@
-{ config, lib, osConfig ? { }, ... }:
+{ config, lib, ... }:
 let
-  dmsEnabled = lib.attrByPath [ "programs" "dank-material-shell" "enable" ] false osConfig;
-  noctaliaEnabled = config.programs.noctalia-shell.enable;
+  dmsEnabled = lib.attrByPath [ "programs" "dank-material-shell" "enable" ] false config;
+  noctaliaEnabled = lib.attrByPath [ "programs" "noctalia-shell" "enable" ] false config;
   baseConfig = builtins.readFile ./.config/niri/config.kdl;
   shellBindBlockBase = ''
     Super+Space hotkey-overlay-title="启动程序：noctalia" { spawn-sh "noctalia-shell ipc call launcher toggle"; }
@@ -27,8 +27,8 @@ let
       ''
         Super+Space hotkey-overlay-title="启动程序：fuzzel" { spawn "fuzzel"; }
         Super+L hotkey-overlay-title="锁屏：swaylock" { spawn "swaylock"; }
-        Ctrl+Alt+Delete hotkey-overlay-title="会话菜单：未配置" { spawn-sh "echo 'No shell session menu backend configured'"; }
-        Super+Shift+E hotkey-overlay-title="会话菜单：未配置" { spawn-sh "echo 'No shell session menu backend configured'"; }
+        Ctrl+Alt+Delete hotkey-overlay-title="退出：Niri" { quit; }
+        Super+Shift+E hotkey-overlay-title="退出：Niri" { quit; }
         Super+R hotkey-overlay-title="启动器：fuzzel" { spawn "fuzzel"; }
         Super+V hotkey-overlay-title="剪贴板：cliphist" { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
       '';

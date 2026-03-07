@@ -8,6 +8,7 @@
   imports = [
     ./niri.nix
     ./noctalia.nix
+    ./dms.nix
     ./alacritty.nix
     ./kitty.nix
     ./btop.nix

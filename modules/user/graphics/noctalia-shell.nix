@@ -1,7 +1,7 @@
 { inputs, config, lib, ... }: {
   imports = [ inputs.noctalia.homeModules.default ];
 
-  config = lib.mkIf config.programs.noctalia-shell.enable {
+  config = lib.mkIf (lib.attrByPath [ "programs" "noctalia-shell" "enable" ] false config) {
     programs.noctalia-shell.systemd.enable = lib.mkDefault true;
   };
 }
