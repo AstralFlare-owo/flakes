@@ -45,7 +45,7 @@
     ../../modules/user/app/wpsoffice.nix
     ../../modules/user/app/zsh.nix
     ../../modules/user/app/musicfox.nix
-    ../../modules/user/graphics/noctalia-shell.nix
+    # ../../modules/user/graphics/noctalia-shell.nix
     ../../modules/user/graphics/dms.nix
   ];
 
