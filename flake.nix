@@ -99,7 +99,7 @@
     nixosConfigurations = {
       g5000 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = specialArgs;
+        specialArgs = specialArgs // { afDevice = "aflare/g5000"; };
         modules = [
           self.nixosModules.nur
           self.nixosModules.nixpkgs
@@ -109,16 +109,18 @@
         ];
       };
 
-      hyperv = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = specialArgs;
-        modules = [
-          self.nixosModules.nur
-          self.nixosModules.nixpkgs
-          ./hosts/hyperv/configuration.nix
-          home-manager.nixosModules.home-manager
-        ];
-      };
+      # DEPRECATED!
+
+      # hyperv = nixpkgs.lib.nixosSystem {
+      #   system = "x86_64-linux";
+      #   specialArgs = specialArgs;
+      #   modules = [
+      #     self.nixosModules.nur
+      #     self.nixosModules.nixpkgs
+      #     ./hosts/hyperv/configuration.nix
+      #     home-manager.nixosModules.home-manager
+      #   ];
+      # };
     };
   };
 }

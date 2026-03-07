@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, lib, afDevice, ... }: {
   home.username = "af";
   home.homeDirectory = "/home/af";
   home.stateVersion = "26.05";
@@ -45,12 +45,44 @@
     ../../modules/user/app/zsh.nix
     ../../modules/user/app/musicfox.nix
     ../../modules/user/graphics/noctalia-shell.nix
+    ../../modules/user/graphics/kanshi.nix
   ];
 
   programs.git = {
     enable = true;
     userName = "AstralFlare-owo";
     userEmail = "tuanzi_awa@qq.com";
+  };
+
+  services.kanshi.profiles = lib.mkIf (afDevice == "aflare/g5000") {
+    internal = {
+      outputs = [
+        {
+          criteria = "eDP-1";
+          status = "enable";
+          position = "0,0";
+          scale = 1.5;
+        }
+      ];
+    };
+
+    docked = {
+      outputs = [
+        {
+          criteria = "HDMI-A-1";
+          status = "enable";
+          position = "0,0";
+          mode = "1920x1080";
+          scale = 1.0;
+        }
+        {
+          criteria = "eDP-1";
+          status = "enable";
+          position = "1920,0";
+          scale = 1.5;
+        }
+      ];
+    };
   };
 
   home.file = {

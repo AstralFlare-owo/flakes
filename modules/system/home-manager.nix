@@ -1,11 +1,10 @@
-{ inputs, ... }: {
+{ inputs, afDevice, ... }: {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "bak";
     overwriteBackup = true;
-    extraSpecialArgs = { inherit inputs; };
-    sharedModules = [ inputs.openclaw.homeManagerModules.openclaw ];
+    extraSpecialArgs = { inherit inputs; afDevice = afDevice; };
     users.af = import ../../home/af;
   };
 }
