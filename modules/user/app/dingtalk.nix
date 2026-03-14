@@ -1,5 +1,5 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    pkgs.nur.repos.xddxdd.dingtalk
+    pkgs.nur.repos.yakkhini.dingtalk
   ];
 }
