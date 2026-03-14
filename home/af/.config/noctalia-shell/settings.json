@@ -665,7 +665,7 @@
     ]
   },
   "notifications": {
-    "enabled": true,
+    "enabled": false,
     "enableMarkdown": true,
     "density": "compact",
     "monitors": [],
