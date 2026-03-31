@@ -23,7 +23,7 @@
     ../../modules/user/app/abdm.nix
 #   ../../modules/user/app/alacritty.nix
     ../../modules/user/app/chrome.nix
-    ../../modules/user/app/codex.nix
+#   ../../modules/user/app/codex.nix
     ../../modules/user/app/cli-tools.nix
     ../../modules/user/app/dingtalk.nix
     ../../modules/user/app/hmcl.nix
