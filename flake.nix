@@ -13,12 +13,14 @@
     ];
     extra-substituters = [
       # [Cachix Cache]
+      "https://af-nur.cachix.org"
       "https://claude-code-nix.cachix.org"
       "https://nix-community.cachix.org"
       "https://devenv.cachix.org"
     ];
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "af-nur.cachix.org-1:687IgiHqfOdqzW/AXQGtoKO7PH5Tx3kbCRn7XODV17M="
       "claude-code-nix.cachix.org-1:VzA1HW3CkJnuSQaPE1t7OfSaleacUnO19VrZ3hJFH+0="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
@@ -73,15 +75,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # OpenClaw
-    openclaw = {
-      # [ghfast.top Mirror]
-      url = "git+https://ghfast.top/https://github.com/openclaw/nix-openclaw.git?shallow=1";
-      # [Github]
-      # url = "git+https://github.com/openclaw/nix-openclaw.git?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Fix-python
     fix-python = {
       # [ghfast.top Mirror]
@@ -110,7 +103,6 @@
       nur = { ... }: {
         nixpkgs.overlays = [
           inputs.nur.overlays.default
-          inputs.openclaw.overlays.default
         ];
       };
       nixpkgs = { ... }: {
@@ -130,19 +122,6 @@
           home-manager.nixosModules.home-manager
         ];
       };
-
-      # DEPRECATED!
-
-      # hyperv = nixpkgs.lib.nixosSystem {
-      #   system = "x86_64-linux";
-      #   specialArgs = specialArgs;
-      #   modules = [
-      #     self.nixosModules.nur
-      #     self.nixosModules.nixpkgs
-      #     ./hosts/hyperv/configuration.nix
-      #     home-manager.nixosModules.home-manager
-      #   ];
-      # };
     };
   };
 }
