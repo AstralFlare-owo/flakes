@@ -46,6 +46,7 @@
     ../../modules/user/app/musicfox.nix
     ../../modules/user/graphics/noctalia-shell.nix
     ../../modules/user/graphics/kanshi.nix
+    ../../modules/user/app/opencode.nix
   ];
 
   programs.git = {

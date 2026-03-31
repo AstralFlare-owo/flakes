@@ -3,6 +3,7 @@
 
   nixConfig = {
     substituters = [
+      # [Nixpkgs Official Cache]
       # TUNA Mirror
       # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       # NJU Mirror
@@ -10,8 +11,17 @@
       # NixOS Official
       "https://cache.nixos.org"
     ];
+    extra-substituters = [
+      # [Cachix Cache]
+      "https://claude-code-nix.cachix.org"
+      "https://nix-community.cachix.org"
+      "https://devenv.cachix.org"
+    ];
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "claude-code-nix.cachix.org-1:VzA1HW3CkJnuSQaPE1t7OfSaleacUnO19VrZ3hJFH+0="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
     ];
     experimental-features = [ "nix-command" "flakes" ];
   };
@@ -53,6 +63,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Noctalia Shell
     noctalia = {
       # [ghfast.top Mirror]
       url = "git+https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git?shallow=1";
@@ -62,6 +73,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # OpenClaw
     openclaw = {
       # [ghfast.top Mirror]
       url = "git+https://ghfast.top/https://github.com/openclaw/nix-openclaw.git?shallow=1";
@@ -70,11 +82,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Fix-python
     fix-python = {
       # [ghfast.top Mirror]
       url = "git+https://ghfast.top/https://github.com/GuillaumeDesforges/fix-python.git?shallow=1";
       # [Github]
       # url = "git+https://github.com/GuillaumeDesforges/fix-python.git?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Claude Code
+    claude-code = {
+      # [ghfast.top Mirror]
+      url = "git+https://ghfast.top/https://github.com/sadjow/claude-code-nix.git?shallow=1";
+      # [Github]
+      # url = "git+https://github.com/sadjow/claude-code-nix.git?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
