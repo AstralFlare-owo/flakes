@@ -1,6 +1,6 @@
 { config, lib, afDevice, ... }: {
-  home.username = "af";
-  home.homeDirectory = "/home/af";
+  home.username = "deepslate";
+  home.homeDirectory = "/home/deepslate";
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;

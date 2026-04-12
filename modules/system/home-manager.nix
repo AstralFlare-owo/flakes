@@ -5,6 +5,6 @@
     backupFileExtension = "bak";
     overwriteBackup = true;
     extraSpecialArgs = { inherit inputs; afDevice = afDevice; };
-    users.af = import ../../home/af;
+    users.deepslate = import ../../home/deepslate;
   };
 }

@@ -32,7 +32,7 @@
 
   services.libinput.enable = true;
 
-  services.syncthing.user = "af";
+  services.syncthing.user = "deepslate";
 
   services.easytier.instances.ctmc.extraArgs = [ "--hostname" "g5000.slate" ];
 

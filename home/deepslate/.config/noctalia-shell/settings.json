@@ -214,7 +214,7 @@
     "screenOverrides": []
   },
   "general": {
-    "avatarImage": "/home/af/deepslate_assets/Deepslate/avatar_2d.png",
+    "avatarImage": "/home/deepslate/deepslate_assets/Deepslate/avatar_2d.png",
     "dimmerOpacity": 0.2,
     "showScreenCorners": true,
     "forceBlackScreenCorners": true,
@@ -324,7 +324,7 @@
   "wallpaper": {
     "enabled": true,
     "overviewEnabled": true,
-    "directory": "/home/af/Pictures/Wallpapers",
+    "directory": "/home/deepslate/Pictures/Wallpapers",
     "monitorDirectories": [],
     "enableMultiMonitorDirectories": false,
     "showHiddenFiles": false,
@@ -377,7 +377,7 @@
           "#e9bf8e",
           "#ffb4ab"
         ],
-        "path": "/home/af/Pictures/Wallpapers/.loli-poster-fs8-4k.png",
+        "path": "/home/deepslate/Pictures/Wallpapers/.loli-poster-fs8-4k.png",
         "useWallpaperColors": true
       },
       {
@@ -390,7 +390,7 @@
           "#c8f971",
           "#d8856c"
         ],
-        "path": "/home/af/Pictures/Wallpapers/AstRiverse-Wp.png",
+        "path": "/home/deepslate/Pictures/Wallpapers/AstRiverse-Wp.png",
         "useWallpaperColors": true
       },
       {
@@ -403,7 +403,7 @@
           "#c7f871",
           "#d38669"
         ],
-        "path": "/home/af/Pictures/Wallpapers/OHR.MtHoodOregon_ZH-CN6068357532_UHD.jpeg",
+        "path": "/home/deepslate/Pictures/Wallpapers/OHR.MtHoodOregon_ZH-CN6068357532_UHD.jpeg",
         "useWallpaperColors": true
       },
       {
@@ -416,7 +416,7 @@
           "#675ec2",
           "#fd4663"
         ],
-        "path": "/home/af/Pictures/Wallpapers/139369087_p0.jpg",
+        "path": "/home/deepslate/Pictures/Wallpapers/139369087_p0.jpg",
         "useWallpaperColors": true
       },
       {
@@ -430,7 +430,7 @@
           "#94e2d5",
           "#f38ba8"
         ],
-        "path": "/home/af/Pictures/Wallpapers/nix-wallpaper-nineish-catppuccin-macchiato-alt.png",
+        "path": "/home/deepslate/Pictures/Wallpapers/nix-wallpaper-nineish-catppuccin-macchiato-alt.png",
         "useWallpaperColors": false
       }
     ]
