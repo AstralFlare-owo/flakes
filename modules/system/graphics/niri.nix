@@ -9,6 +9,7 @@
     swaylock
     swayidle
     brightnessctl
+    playerctl
     wireplumber
   ];
 }
