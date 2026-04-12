@@ -1,5 +1,5 @@
 {
-  "settingsVersion": 58,
+  "settingsVersion": 59,
   "bar": {
     "barType": "simple",
     "position": "top",
@@ -15,7 +15,6 @@
     "enableExclusionZoneInset": true,
     "backgroundOpacity": 0.93,
     "useSeparateOpacity": false,
-    "floating": false,
     "marginVertical": 4,
     "marginHorizontal": 4,
     "frameThickness": 8,
@@ -75,6 +74,7 @@
           "maxWidth": 300,
           "scrollingMode": "hover",
           "showIcon": true,
+          "showText": true,
           "textColor": "none",
           "useFixedWidth": false
         }
@@ -214,7 +214,7 @@
     "screenOverrides": []
   },
   "general": {
-    "avatarImage": "/home/af/astriverse-resources/AstralFlare/avatar_v2.png",
+    "avatarImage": "/home/af/deepslate_assets/Deepslate/avatar_2d.png",
     "dimmerOpacity": 0.2,
     "showScreenCorners": true,
     "forceBlackScreenCorners": true,
@@ -274,7 +274,8 @@
         "Del"
       ]
     },
-    "reverseScroll": false
+    "reverseScroll": false,
+    "smoothScrollEnabled": true
   },
   "ui": {
     "fontDefault": "Sans Serif",
@@ -329,6 +330,7 @@
     "showHiddenFiles": false,
     "viewMode": "single",
     "setWallpaperOnAllMonitors": true,
+    "linkLightAndDarkWallpapers": true,
     "fillMode": "crop",
     "fillColor": "#000000",
     "useSolidColor": false,
@@ -337,11 +339,19 @@
     "wallpaperChangeMode": "random",
     "randomIntervalSec": 300,
     "transitionDuration": 1500,
-    "transitionType": "random",
+    "transitionType": [
+      "fade",
+      "disc",
+      "stripes",
+      "wipe",
+      "pixelate",
+      "honeycomb"
+    ],
     "skipStartupTransition": false,
     "transitionEdgeSmoothness": 0.05,
     "panelPosition": "follow_bar",
     "hideWallpaperFilenames": false,
+    "useOriginalImages": false,
     "overviewBlur": 0.4,
     "overviewTint": 0.6,
     "useWallhaven": false,
@@ -408,6 +418,20 @@
         ],
         "path": "/home/af/Pictures/Wallpapers/139369087_p0.jpg",
         "useWallpaperColors": true
+      },
+      {
+        "appearance": "dark",
+        "colorScheme": "Catppuccin",
+        "darkMode": true,
+        "generationMethod": "dysfunctional",
+        "paletteColors": [
+          "#cba6f7",
+          "#fab387",
+          "#94e2d5",
+          "#f38ba8"
+        ],
+        "path": "/home/af/Pictures/Wallpapers/nix-wallpaper-nineish-catppuccin-macchiato-alt.png",
+        "useWallpaperColors": false
       }
     ]
   },
@@ -418,7 +442,6 @@
     "clipboardWrapText": true,
     "enableClipboardSmartIcons": true,
     "enableClipboardChips": true,
-    "enableClipboardDateHeaders": true,
     "clipboardWatchTextCommand": "wl-paste --type text --watch cliphist store",
     "clipboardWatchImageCommand": "wl-paste --type image --watch cliphist store",
     "position": "center",
@@ -570,6 +593,8 @@
     "colorizeIcons": false,
     "showLauncherIcon": false,
     "launcherPosition": "start",
+    "launcherUseDistroLogo": false,
+    "launcherIcon": "",
     "launcherIconColor": "none",
     "pinnedStatic": true,
     "inactiveIndicators": true,
@@ -586,8 +611,6 @@
     "indicatorOpacity": 0.6
   },
   "network": {
-    "wifiEnabled": true,
-    "airplaneModeEnabled": false,
     "bluetoothRssiPollingEnabled": true,
     "bluetoothRssiPollIntervalMs": 10000,
     "networkPanelView": "wifi",
@@ -714,6 +737,7 @@
     "volumeOverdrive": true,
     "spectrumFrameRate": 30,
     "visualizerType": "linear",
+    "spectrumMirrored": true,
     "mprisBlacklist": [],
     "preferredPlayer": "",
     "volumeFeedback": true,
@@ -726,14 +750,15 @@
     "backlightDeviceMappings": []
   },
   "colorSchemes": {
-    "useWallpaperColors": true,
-    "predefinedScheme": "Tokyo Night",
+    "useWallpaperColors": false,
+    "predefinedScheme": "Catppuccin",
     "darkMode": true,
     "schedulingMode": "off",
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
     "generationMethod": "dysfunctional",
-    "monitorForColors": ""
+    "monitorForColors": "",
+    "syncGsettings": true
   },
   "templates": {
     "activeTemplates": [
@@ -759,10 +784,6 @@
       },
       {
         "enabled": true,
-        "id": "code"
-      },
-      {
-        "enabled": true,
         "id": "qt"
       },
       {
@@ -780,6 +801,10 @@
       {
         "enabled": true,
         "id": "yazi"
+      },
+      {
+        "enabled": true,
+        "id": "code"
       }
     ],
     "enableUserTheming": true
@@ -802,10 +827,12 @@
     "performanceModeEnabled": "",
     "performanceModeDisabled": "",
     "startup": "sh -c \"fcitx5-remote -r && fcitx5 -rd\"",
-    "session": ""
+    "session": "",
+    "colorGeneration": ""
   },
   "plugins": {
-    "autoUpdate": true
+    "autoUpdate": true,
+    "notifyUpdates": true
   },
   "idle": {
     "enabled": false,

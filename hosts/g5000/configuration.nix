@@ -34,7 +34,7 @@
 
   services.syncthing.user = "af";
 
-  services.easytier.instances.ctmc.extraArgs = [ "--hostname" "g5000.aflare" ];
+  services.easytier.instances.ctmc.extraArgs = [ "--hostname" "g5000.slate" ];
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
@@ -50,6 +50,6 @@
     ELECTRON_OZONE_PLATFORM_HINT=wayland
   '';
 
-  networking.hostName = "AstRiverse";
+  networking.hostName = "lithosphere";
   system.stateVersion = "26.05";
 }
