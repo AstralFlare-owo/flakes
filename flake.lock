@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "catppuccin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1776681486,
+        "narHash": "sha256-akO/L6Jt4341uBnf3CIpJOTTYyCBQsSvP2hnikV2oMY=",
+        "ref": "refs/heads/main",
+        "rev": "b85b328ecc9874f4e7424db2820333c148e8dd66",
+        "shallow": true,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/catppuccin/nix.git"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "https://ghfast.top/https://github.com/catppuccin/nix.git"
+      }
+    },
     "claude-code": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -107,10 +128,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1774969509,
-        "narHash": "sha256-LCmfWlT3tlGVj0Q20TKqs5PBwdH3vnNsxJEhqt0wH1o=",
+        "lastModified": 1776721614,
+        "narHash": "sha256-zGuW7C4tsScib2560yE5VV6lY/MdRs30aU9cbg3RP+U=",
         "ref": "refs/heads/master",
-        "rev": "a7d2aca3f0dd952b01d8ed5c45536b40af3841eb",
+        "rev": "c555a4a34a260493be5adb795c54e013c58f2d34",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/nix-community/home-manager.git"
@@ -223,6 +244,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin": "catppuccin",
         "claude-code": "claude-code",
         "fix-python": "fix-python",
         "home-manager": "home-manager",

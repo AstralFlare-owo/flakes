@@ -93,6 +93,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    catppuccin = {
+      url = "git+https://ghfast.top/https://github.com/catppuccin/nix.git?shallow=1";
+      # [Github]
+      # url = "git+https://github.com/catppuccin/nix.git?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixos-hardware, nur, home-manager, ...}@inputs:

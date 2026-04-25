@@ -1,4 +1,4 @@
-{ config, lib, afDevice, ... }: {
+{ config, lib, afDevice, pkgs, inputs, ... }: {
   home.username = "deepslate";
   home.homeDirectory = "/home/deepslate";
   home.stateVersion = "26.05";
@@ -6,6 +6,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    inputs.catppuccin.homeModules.catppuccin
     ./niri.nix
     ./noctalia.nix
     ./alacritty.nix
@@ -85,8 +86,21 @@
     };
   };
 
+  catppuccin = {
+    cursors = {
+      enable = true;
+      # accent = "dark";
+    };
+    accent = "lavender";
+    flavor = "macchiato";
+  };
+
+  home.sessionVariables = {
+    XCURSOR_THEME = "catppuccin-macchiato-lavender-cursors";
+  };
+
   home.file = {
-    ".zshrc".source = ./.zshrc;
+    # ".zshrc".source = ./.zshrc;
     ".config/fastfetch/config.jsonc".source = ./.config/fastfetch/config.jsonc;
     ".config/user-dirs.dirs".source = ./.config/user-dirs.dirs;
     ".config/user-dirs.locale".source = ./.config/user-dirs.locale;
