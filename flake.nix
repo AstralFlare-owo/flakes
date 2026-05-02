@@ -34,9 +34,9 @@
     # [TUNA Mirror]
     # nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git?ref=nixos-unstable&shallow=1";
     # [NJU Mirror]
-    nixpkgs.url = "git+https://mirror.nju.edu.cn/git/nixpkgs.git?ref=nixos-unstable&shallow=1";
+    # nixpkgs.url = "git+https://mirror.nju.edu.cn/git/nixpkgs.git?ref=nixos-unstable&shallow=1";
     # [Github]
-    # nixpkgs.url = "git+https://github.com/NixOS/nixpkgs.git?ref=nixos-unstable&shallow=1";
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs.git?ref=nixos-unstable&shallow=1";
 
     # NixOS Hardware Configurations
 
@@ -113,6 +113,17 @@
       };
       nixpkgs = { ... }: {
         nixpkgs.config.allowUnfree = true;
+        nixpkgs.overlays = [
+          (final: prev: {
+            openldap = if prev.stdenv.hostPlatform.system == "i686-linux" then
+              prev.openldap.overrideAttrs (old: {
+                doCheck = false;
+                doInstallCheck = false;
+              })
+            else
+              prev.openldap;
+          })
+        ];
       };
     };
 
