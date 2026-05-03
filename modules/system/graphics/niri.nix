@@ -12,4 +12,14 @@
     playerctl
     wireplumber
   ];
+
+  xdg.portal = {
+    config = {
+      niri = {
+        "org.freedesktop.impl.portal.ScreenCast" = [ "niri" ];
+        "org.freedesktop.impl.portal.Screenshot" = [ "niri" ];
+        default = [ "gnome" "gtk" ];
+      };
+    };
+  };
 }
