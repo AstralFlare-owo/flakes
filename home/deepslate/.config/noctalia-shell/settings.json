@@ -29,6 +29,7 @@
       "left": [
         {
           "colorizeSystemIcon": "none",
+          "colorizeSystemText": "none",
           "customIconPath": "",
           "enableColorization": false,
           "icon": "rocket",
@@ -203,6 +204,7 @@
         {
           "colorizeDistroLogo": false,
           "colorizeSystemIcon": "none",
+          "colorizeSystemText": "none",
           "customIconPath": "",
           "enableColorization": true,
           "icon": "noctalia",
@@ -237,7 +239,7 @@
     "compactLockScreen": false,
     "lockScreenAnimations": true,
     "lockOnSuspend": true,
-    "showSessionButtonsOnLockScreen": true,
+    "showSessionButtonsOnLockScreen": false,
     "showHibernateOnLockScreen": true,
     "enableLockScreenMediaControls": true,
     "enableShadows": true,
@@ -304,6 +306,7 @@
     "name": "Longgang District",
     "weatherEnabled": true,
     "weatherShowEffects": true,
+    "weatherTaliaMascotAlways": false,
     "useFahrenheit": false,
     "use12hourFormat": false,
     "showWeekNumberInCalendar": false,
@@ -312,7 +315,8 @@
     "analogClockInCalendar": false,
     "firstDayOfWeek": -1,
     "hideWeatherTimezone": false,
-    "hideWeatherCityName": false
+    "hideWeatherCityName": false,
+    "autoLocate": false
   },
   "calendar": {
     "cards": [
