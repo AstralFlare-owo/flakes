@@ -28,9 +28,9 @@
       (fcitx5-rime.override {
         rimeDataPkgs = with pkgs; [
           rime-ice
-          rime-data
         ];
       })
+      rime-ice
       fcitx5-material-color
     ];
     fcitx5.settings = {
@@ -51,16 +51,19 @@
   environment.sessionVariables = {
     GTK_IM_MODULE = "fcitx";
     QT_IM_MODULE = "fcitx";
+    QT_IM_MODULES = "fcitx;ibus;wayland";
+    GLFW_IM_MODULE = "fcitx";
+    SDL_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
   };
 
-  systemd.user.services.fcitx5 = {
-    description = "Fcitx5 Input Method";
-    serviceConfig = {
-      ExecStart = "${pkgs.fcitx5}/bin/fcitx5";
-      Restart = "on-failure";
-      RestartSec = 2;
-    };
-    wantedBy = [ "default.target" ];
-  };
+  # systemd.user.services.fcitx5 = {
+  #   description = "Fcitx5 Input Method";
+  #   serviceConfig = {
+  #     ExecStart = "${pkgs.fcitx5}/bin/fcitx5";
+  #     Restart = "on-failure";
+  #     RestartSec = 2;
+  #   };
+  #   wantedBy = [ "default.target" ];
+  # };
 }
