@@ -17,6 +17,7 @@
     ../../modules/system/app/ollama.nix
     ../../modules/system/app/sunshine.nix
     ../../modules/system/app/nh.nix
+    ../../modules/system/hardware/modem.nix
   ];
 
   hardware.nvidia.prime.offload = {

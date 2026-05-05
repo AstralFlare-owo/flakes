@@ -11,6 +11,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
+    "olm-3.2.16"
   ];
 
   services.openssh.enable = true;
