@@ -15,6 +15,10 @@
 
   services.openssh.enable = true;
   services.flatpak.enable = true;
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
   services.xserver.excludePackages = [ pkgs.xterm ];
   programs.zsh.enable = true;
   services.power-profiles-daemon.enable = true;

@@ -48,11 +48,12 @@
     ];
   };
 
-  environment.systemPackages = with pkgs.gnomeExtensions; [
-    appindicator
-    dash-to-dock
-    clipboard-history
-    caffeine
-    rounded-window-corners-reborn
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.appindicator
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.clipboard-history
+    gnomeExtensions.caffeine
+    gnomeExtensions.rounded-window-corners-reborn
+    file-roller
   ];
 }
