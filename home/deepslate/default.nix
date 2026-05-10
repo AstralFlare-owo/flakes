@@ -47,6 +47,7 @@
     ../../modules/user/graphics/noctalia-shell.nix
     ../../modules/user/graphics/kanshi.nix
     ../../modules/user/app/opencode.nix
+    ../../modules/user/app/nix-unsafe.nix
   ];
 
   programs.git = {
