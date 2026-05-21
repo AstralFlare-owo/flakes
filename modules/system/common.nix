@@ -135,6 +135,7 @@
     git
     vim
     nano
+    nano-syntax-highlighting
     curl
     wget
     tmux
