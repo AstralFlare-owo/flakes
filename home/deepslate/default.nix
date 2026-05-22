@@ -48,6 +48,7 @@
     ../../modules/user/graphics/kanshi.nix
     ../../modules/user/app/opencode.nix
     ../../modules/user/app/nix-unsafe.nix
+    ../../modules/user/app/vlc.nix
   ];
 
   programs.git = {
