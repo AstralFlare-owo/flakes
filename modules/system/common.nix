@@ -151,6 +151,8 @@
     noto-fonts-cjk-serif
     noto-fonts-color-emoji
     maple-mono.NF-CN-unhinted
+    corefonts
+    vista-fonts
   ];
 
   fonts.fontconfig = {
@@ -158,6 +160,7 @@
       serif = [ "Noto Serif CJK SC" ];
       sansSerif = [ "Noto Sans CJK SC" ];
       monospace = [ "Maple Mono NF CN" ];
+      emoji = [ "Noto Color Emoji" ];
     };
   };
 
