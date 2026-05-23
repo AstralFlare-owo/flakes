@@ -54,6 +54,7 @@
     gnomeExtensions.clipboard-history
     gnomeExtensions.caffeine
     gnomeExtensions.rounded-window-corners-reborn
+    gsettings-desktop-schemas
     file-roller
   ];
 }
