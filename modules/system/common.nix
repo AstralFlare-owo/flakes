@@ -153,6 +153,7 @@
     maple-mono.NF-CN-unhinted
     corefonts
     vista-fonts
+    vista-fonts-chs
   ];
 
   fonts.fontconfig = {
