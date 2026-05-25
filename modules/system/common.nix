@@ -158,8 +158,8 @@
 
   fonts.fontconfig = {
     defaultFonts = {
-      serif = [ "Noto Serif CJK SC" ];
-      sansSerif = [ "Noto Sans CJK SC" ];
+      serif = [ "Noto Serif" "Noto Serif CJK SC" "Noto Color Emoji" ];
+      sansSerif = [ "Noto Sans" "Noto Sans CJK SC" "Noto Color Emoji" ];
       monospace = [ "Maple Mono NF CN" ];
       emoji = [ "Noto Color Emoji" ];
     };
