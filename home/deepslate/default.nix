@@ -97,6 +97,16 @@
     flavor = "macchiato";
   };
 
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
+  };
+
+  home.packages = with pkgs;[
+    libsForQt5.qt5ct
+    kdePackages.qt6ct
+  ];
+
   home.sessionVariables = {
     XCURSOR_THEME = "catppuccin-macchiato-lavender-cursors";
   };
