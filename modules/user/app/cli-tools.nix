@@ -5,6 +5,12 @@
     ueberzugpp
     httpie
     tcping-rs
+    ov
+    fx
+    procs
+    sd
+    dust
+    duf
   ];
 
   programs.fzf = {
@@ -53,9 +59,6 @@
 
   programs.bat = {
     enable = true;
-    config = {
-      pager = "less -FR";
-    };
   };
 
   programs.fd = {
@@ -72,6 +75,8 @@
       side-by-side = true;
     };
   };
+
+  programs.jq.enable = true;
 
   programs.git = {
     settings = {
