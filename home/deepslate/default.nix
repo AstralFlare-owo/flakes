@@ -50,6 +50,7 @@
     ../../modules/user/app/nix-unsafe.nix
     ../../modules/user/app/vlc.nix
     ../../modules/user/app/satty.nix
+    ../../modules/user/app/splayer.nix
   ];
 
   programs.git = {
