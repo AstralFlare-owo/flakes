@@ -228,10 +228,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1779520747,
-        "narHash": "sha256-plH2Kh9oIISYUSiYa7vC1+puBJvSNB5oXZR1OEfVN64=",
+        "lastModified": 1780440821,
+        "narHash": "sha256-U/pMddKcz0KisK/sT+fB0Wi1YX+OCmck8K45RGt3Q9o=",
         "ref": "refs/heads/main",
-        "rev": "921e02b3516aec16f26e77ab30753b0538cf2da6",
+        "rev": "eeae647d7aa8a7d45aa30043a8434aa006956437",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/nix-community/NUR.git"
