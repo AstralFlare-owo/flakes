@@ -7,10 +7,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1779446167,
-        "narHash": "sha256-95gfnivOKw+zleITz2OptawwTeSs36Y9u+qeU0xdqT8=",
+        "lastModified": 1781255309,
+        "narHash": "sha256-n2P5xkAYGylrJ3feu7L6uaCUw/+jW8rk+HO127gDbFA=",
         "ref": "refs/heads/main",
-        "rev": "229ede9cec873986144e222b2c61c2f239c16125",
+        "rev": "036c78ea4cd8a42c8546c6316a944fd7d59d4341",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/catppuccin/nix.git"
@@ -29,10 +29,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1779510126,
-        "narHash": "sha256-AN19hN63A3nuuUsOo42dERR/fmMt/rSEqNc1F3xjpAs=",
+        "lastModified": 1781314818,
+        "narHash": "sha256-76EizPNWUOPLqwg6OP1KnX7XE7FEdrsJ2zQQaRKLYT4=",
         "ref": "refs/heads/main",
-        "rev": "304b96c0998c76633bacbb44daa6a5de40f92273",
+        "rev": "7c3c4413d8dbe29762fb5a9cb5443c3a72a9e18a",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/sadjow/claude-code-nix.git"
@@ -128,10 +128,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1779507042,
-        "narHash": "sha256-7wOwi8B6D0BYsieZCnHZZj2sNUzgJhLoIVSfkwB7lxQ=",
+        "lastModified": 1781305496,
+        "narHash": "sha256-g8Vv4Qfc7n+lgov97REu3X6BeJtvYY0hlSUZR1GrGQQ=",
         "ref": "refs/heads/master",
-        "rev": "509ed3c603349a9d43de9e2ae6613baea6bd5b34",
+        "rev": "c87a39aa979acc4848016d2220c6238390d84779",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/nix-community/home-manager.git"
@@ -143,11 +143,16 @@
       }
     },
     "nixos-hardware": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "lastModified": 1779258371,
-        "narHash": "sha256-j1iZsLy6oFApqR1oiDmHhvkwxXqcNi0aoSJj643LuwU=",
+        "lastModified": 1781168557,
+        "narHash": "sha256-LOnLQ2tpYF9gqIDDr3+j3DbpJJr/QCH6zPRT2GzEUOE=",
         "ref": "refs/heads/master",
-        "rev": "c97bc4d15bd3473dd095e8e8ba57330ab1943a77",
+        "rev": "6358ff76821101c178e3ab4919a62799bfe3652e",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/NixOS/nixos-hardware.git"
@@ -160,10 +165,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1779357205,
-        "narHash": "sha256-cCO8aTqss5x9Ky8GWkpY0Hy5fyTZEbtifSUV8QjSzic=",
+        "lastModified": 1781074563,
+        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
         "ref": "nixos-unstable",
-        "rev": "f83fc3c307e74bc5fd5adb7eb6b8b13ffd2a36e1",
+        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs.git"
@@ -183,15 +188,16 @@
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
-        "lastModified": 1779504029,
-        "narHash": "sha256-f8u9DV9Qk8KJh7DVvk4UgUFTN0NDJeFxgrffTSwPkpA=",
-        "ref": "refs/heads/main",
-        "rev": "b99b7a7f06ff749df9ac43181ff7889ff90c5599",
+        "lastModified": 1780949817,
+        "narHash": "sha256-2oJuPyt+4dd+ZzO7TFqpmkSAAYpRg9SF4eV8kJGl6Tk=",
+        "ref": "legacy-v4",
+        "rev": "f816591afc2f2f606d1f0cf70b51e95c04a7a8aa",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git"
       },
       "original": {
+        "ref": "legacy-v4",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git"
@@ -207,11 +213,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1778983195,
-        "narHash": "sha256-hE3EFK5GoSdbO5WHZ8bZDUVYkofbDLQN/KK25z7IOOI=",
+        "lastModified": 1780799499,
+        "narHash": "sha256-YloRtLqJabzYUWvdLyh67zH4DZrR3kQj+dlQJwLPmPM=",
         "owner": "noctalia-dev",
         "repo": "noctalia-qs",
-        "rev": "4116b41cdc89e186be7cb8b24a9b6022af95d742",
+        "rev": "f308426239665e3bc3d624014e9295b2ae2f58ff",
         "type": "github"
       },
       "original": {
@@ -228,10 +234,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1780440821,
-        "narHash": "sha256-U/pMddKcz0KisK/sT+fB0Wi1YX+OCmck8K45RGt3Q9o=",
+        "lastModified": 1781355852,
+        "narHash": "sha256-rv3hrVM2lyH0ebdIu3BVC79r7IOA/vzN4x4Na7EaybY=",
         "ref": "refs/heads/main",
-        "rev": "eeae647d7aa8a7d45aa30043a8434aa006956437",
+        "rev": "6dedb495804a0bfbd9a641a2e888f295b94943b1",
         "shallow": true,
         "type": "git",
         "url": "https://ghfast.top/https://github.com/nix-community/NUR.git"
@@ -308,11 +314,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775636079,
-        "narHash": "sha256-pc20NRoMdiar8oPQceQT47UUZMBTiMdUuWrYu2obUP0=",
+        "lastModified": 1780220602,
+        "narHash": "sha256-eynAfOmbmxJnkp7YewvCEbShNnnYJ9gLLqkzsYtBPeM=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "790751ff7fd3801feeaf96d7dc416a8d581265ba",
+        "rev": "db947814a175b7ca6ded66e21383d938df01c227",
         "type": "github"
       },
       "original": {

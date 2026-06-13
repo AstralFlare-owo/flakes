@@ -3,8 +3,4 @@
         enable = true;
         package = pkgs.ollama-cuda;
     };
-
-    environment.systemPackages = with pkgs; [
-        chatbox
-    ];
 }

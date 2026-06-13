@@ -39,11 +39,14 @@
     nixpkgs.url = "git+https://github.com/NixOS/nixpkgs.git?ref=nixos-unstable&shallow=1";
 
     # NixOS Hardware Configurations
-
-    # [ghfast.top Mirror]
-    nixos-hardware.url = "git+https://ghfast.top/https://github.com/NixOS/nixos-hardware.git?shallow=1";
-    # [Github]
-    # nixos-hardware.url = "git+https://github.com/NixOS/nixos-hardware.git?shallow=1";
+    nixos-hardware = {
+        # [ghfast.top Mirror]
+        url = "git+https://ghfast.top/https://github.com/NixOS/nixos-hardware.git?shallow=1";
+        # [Github]
+        # url = "git+https://github.com/NixOS/nixos-hardware.git?shallow=1";
+        
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Nix User Repository
     nur = {
@@ -68,9 +71,9 @@
     # Noctalia Shell
     noctalia = {
       # [ghfast.top Mirror]
-      url = "git+https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git?shallow=1";
+      url = "git+https://ghfast.top/https://github.com/noctalia-dev/noctalia-shell.git?shallow=1&ref=legacy-v4";
       # [Github]
-      # url = "git+https://github.com/noctalia-dev/noctalia-shell.git?shallow=1";
+      # url = "git+https://github.com/noctalia-dev/noctalia-shell.git?shallow=1&ref=legacy-v4";
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
