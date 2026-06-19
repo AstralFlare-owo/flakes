@@ -5,9 +5,9 @@
     substituters = [
       # [Nixpkgs Official Cache]
       # TUNA Mirror
-      # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       # NJU Mirror
-      # "https://mirrors.nju.edu.cn/nix-channels/store"
+      "https://mirrors.nju.edu.cn/nix-channels/store"
       # NixOS Official
       "https://cache.nixos.org"
     ];
@@ -20,6 +20,8 @@
     ];
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+    ];
+    extra-trusted-public-keys = [
       "af-nur.cachix.org-1:687IgiHqfOdqzW/AXQGtoKO7PH5Tx3kbCRn7XODV17M="
       "claude-code-nix.cachix.org-1:VzA1HW3CkJnuSQaPE1t7OfSaleacUnO19VrZ3hJFH+0="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
