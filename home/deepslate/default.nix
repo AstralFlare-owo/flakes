@@ -8,6 +8,7 @@
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     ./niri.nix
+    ./git.nix
     ./noctalia.nix
     ./alacritty.nix
     ./kitty.nix
@@ -53,12 +54,6 @@
     ../../modules/user/app/splayer.nix
     ../../modules/user/app/clipsync.nix
   ];
-
-  programs.git = {
-    enable = true;
-    userName = "AstralFlare-owo";
-    userEmail = "tuanzi_awa@qq.com";
-  };
 
   services.kanshi.profiles = lib.mkIf (afDevice == "aflare/g5000") {
     internal = {
