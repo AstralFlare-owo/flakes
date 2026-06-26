@@ -25,6 +25,7 @@
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  services.atd.enable = true;
 
   programs.nix-ld = {
     enable = true;

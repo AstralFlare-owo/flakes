@@ -11,6 +11,10 @@
     sd
     dust
     duf
+    zip
+    unzip
+    xclip
+    wl-clipboard
   ];
 
   programs.fzf = {
