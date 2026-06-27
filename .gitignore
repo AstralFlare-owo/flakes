@@ -3,3 +3,5 @@ result-*
 .direnv
 **/.nixos-test-history
 .marscode
+.omo
+.codegraph
