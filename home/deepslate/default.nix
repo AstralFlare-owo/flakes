@@ -53,6 +53,7 @@
     ../../modules/user/app/satty.nix
     ../../modules/user/app/splayer.nix
     ../../modules/user/app/clipsync.nix
+    ../../modules/user/app/direnv.nix
   ];
 
   services.kanshi.profiles = lib.mkIf (afDevice == "aflare/g5000") {
