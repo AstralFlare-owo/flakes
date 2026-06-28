@@ -161,6 +161,9 @@
           "textColor": "none"
         },
         {
+          "id": "plugin:kde-connect"
+        },
+        {
           "defaultSettings": {
             "audioCodec": "opus",
             "audioSource": "default_output",
