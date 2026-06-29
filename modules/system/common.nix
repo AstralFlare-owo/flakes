@@ -147,18 +147,18 @@
     ];
   };
 
+  programs.git.enable = true;
+  programs.vim.enable = true;
+  programs.nano.enable = true;
+  programs.tmux.enable = true;
+
   environment.systemPackages = with pkgs; [
-    git
-    vim
-    nano
     nano-syntax-highlighting
     curl
     wget
-    tmux
-    zsh
     fastfetch
     btop
-    flatpak
+    gh
   ];
 
   fonts.packages = with pkgs; [
