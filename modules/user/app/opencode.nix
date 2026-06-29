@@ -10,7 +10,7 @@ let
     CONFIG="$HOME/.config/opencode/opencode.json"
     TMP=$(mktemp)
     if [ -f "$CONFIG" ]; then
-      ${pkgs.jq}/bin/jq '.plugin = []' "$CONFIG" > "$TMP" && mv "$TMP" "$CONFIG"
+      ${pkgs.jq}/bin/jq '.plugin |= map(select(. != "oh-my-openagent@latest"))' "$CONFIG" > "$TMP" && mv "$TMP" "$CONFIG"
     else
       echo '{}' | ${pkgs.jq}/bin/jq '.plugin = []' > "$CONFIG"
     fi
@@ -25,7 +25,7 @@ let
     CONFIG="$HOME/.config/opencode/opencode.json"
     TMP=$(mktemp)
     if [ -f "$CONFIG" ]; then
-      ${pkgs.jq}/bin/jq '.plugin = ["oh-my-openagent@latest"]' "$CONFIG" > "$TMP" && mv "$TMP" "$CONFIG"
+      ${pkgs.jq}/bin/jq '.plugin |= (. - ["oh-my-openagent@latest"] + ["oh-my-openagent@latest"])' "$CONFIG" > "$TMP" && mv "$TMP" "$CONFIG"
     else
       echo '{}' | ${pkgs.jq}/bin/jq '.plugin = ["oh-my-openagent@latest"]' > "$CONFIG"
     fi
