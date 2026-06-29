@@ -38,6 +38,7 @@
   services.easytier.instances.ctmc.extraArgs = [ "--hostname" "g5000.slate" ];
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
+  system.boot.loader.kernelFile = "vmlinuz";
 
   environment.systemPackages = with pkgs; [
     lenovo-legion
