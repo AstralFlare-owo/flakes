@@ -8,7 +8,6 @@
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     ./niri.nix
-    ./git.nix
     ./noctalia.nix
     ./alacritty.nix
     ./kitty.nix
