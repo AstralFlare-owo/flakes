@@ -1,11 +1,19 @@
 { pkgs, ... }: {
-  programs.clash-verge = {
+  # Clash Verge sucks😡
+
+  # programs.clash-verge = {
+  #   enable = true;
+  #   package = pkgs.clash-verge-rev;
+  #   tunMode = true;
+  #   serviceMode = true;
+  # };
+  services.mihomo = {
     enable = true;
-    package = pkgs.clash-verge-rev;
     tunMode = true;
-    serviceMode = true;
+    processesInfo = true;
+    configFile = "/etc/mihomo/config.yaml";
+    webui = pkgs.zashboard;
   };
-  services.mihomo.tunMode = true;
-  networking.firewall.trustedInterfaces = [ "af-mihomo-tun" "Mihomo" ];
+  networking.firewall.trustedInterfaces = [ "ds-mihomo-tun" "Mihomo" "lo"  ];
   networking.firewall.enable = false;
 }
