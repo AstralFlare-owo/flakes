@@ -18,6 +18,7 @@
     ../../modules/system/app/sunshine.nix
     ../../modules/system/app/nh.nix
     ../../modules/system/hardware/modem.nix
+    ../../modules/system/app/nix-keep-drv.nix
   ];
 
   hardware.nvidia.prime.offload = {
