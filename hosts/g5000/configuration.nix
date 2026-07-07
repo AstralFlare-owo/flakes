@@ -5,6 +5,7 @@
     ../../modules/system/hardware/ddcutil.nix
     ../../modules/system/hardware/wacom.nix
     ../../modules/system/graphics/gnome.nix
+    ../../modules/system/graphics/plymouth.nix
     ../../modules/system/app/clash-verge-rev.nix
     ../../modules/system/app/easytier.nix
     ../../modules/system/virtualisation/kvm.nix
