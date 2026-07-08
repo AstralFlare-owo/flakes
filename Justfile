@@ -17,8 +17,13 @@ boot host:
 switch host:
     nh os switch {{flake}}#{{host}} --show-trace --accept-flake-config
 
-update:
+update: && check
     nix flake update
 
 format:
     fd -e nix -X nixfmt
+
+check: format
+    nix flake check --no-build
+    git --no-pager diff --staged --check
+    git --no-pager diff --check
