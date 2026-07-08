@@ -1,10 +1,9 @@
 { lib, ... }:
 let
-  noctaliaSettings =
-    builtins.fromJSON (builtins.readFile ./.config/noctalia-shell/settings.json);
-  alacrittyThemeEnabled =
-    lib.any (t: (t.id or "") == "alacritty" && (t.enabled or false))
-      (lib.attrByPath [ "templates" "activeTemplates" ] [ ] noctaliaSettings);
+  noctaliaSettings = builtins.fromJSON (builtins.readFile ./.config/noctalia-shell/settings.json);
+  alacrittyThemeEnabled = lib.any (t: (t.id or "") == "alacritty" && (t.enabled or false)) (
+    lib.attrByPath [ "templates" "activeTemplates" ] [ ] noctaliaSettings
+  );
   themeSettings = lib.optionalAttrs alacrittyThemeEnabled {
     general.import = [
       "~/.config/alacritty/themes/noctalia.toml"

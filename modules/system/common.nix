@@ -8,7 +8,10 @@
 
   networking.networkmanager.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
     "olm-3.2.16"
@@ -174,8 +177,16 @@
 
   fonts.fontconfig = {
     defaultFonts = {
-      serif = [ "Noto Serif" "Noto Serif CJK SC" "Noto Color Emoji" ];
-      sansSerif = [ "Noto Sans" "Noto Sans CJK SC" "Noto Color Emoji" ];
+      serif = [
+        "Noto Serif"
+        "Noto Serif CJK SC"
+        "Noto Color Emoji"
+      ];
+      sansSerif = [
+        "Noto Sans"
+        "Noto Sans CJK SC"
+        "Noto Color Emoji"
+      ];
       monospace = [ "Maple Mono NF CN" ];
       emoji = [ "Noto Color Emoji" ];
     };
@@ -185,5 +196,5 @@
   time.timeZone = "Asia/Shanghai";
 
   hardware.bluetooth.enable = true;
-  security.pam.services.swaylock = {};
+  security.pam.services.swaylock = { };
 }

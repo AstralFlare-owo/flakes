@@ -1,10 +1,9 @@
 { lib, ... }:
 let
-  noctaliaSettings =
-    builtins.fromJSON (builtins.readFile ./.config/noctalia-shell/settings.json);
-  btopThemeEnabled =
-    lib.any (t: (t.id or "") == "btop" && (t.enabled or false))
-      (lib.attrByPath [ "templates" "activeTemplates" ] [ ] noctaliaSettings);
+  noctaliaSettings = builtins.fromJSON (builtins.readFile ./.config/noctalia-shell/settings.json);
+  btopThemeEnabled = lib.any (t: (t.id or "") == "btop" && (t.enabled or false)) (
+    lib.attrByPath [ "templates" "activeTemplates" ] [ ] noctaliaSettings
+  );
   baseSettings = {
     background_update = true;
     base_10_bitrate = "Auto";

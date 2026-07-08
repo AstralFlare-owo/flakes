@@ -1,4 +1,12 @@
-{ config, lib, afDevice, pkgs, inputs, ... }: {
+{
+  config,
+  lib,
+  afDevice,
+  pkgs,
+  inputs,
+  ...
+}:
+{
   home.username = "deepslate";
   home.homeDirectory = "/home/deepslate";
   home.stateVersion = "26.05";
@@ -12,9 +20,9 @@
     ./alacritty.nix
     ./kitty.nix
     ./btop.nix
-#   ../../modules/user/graphics/mako.nix
+    #   ../../modules/user/graphics/mako.nix
     ../../modules/user/graphics/ozone-platform-hint-fix.nix
-#   ../../modules/user/graphics/waybar.nix
+    #   ../../modules/user/graphics/waybar.nix
     ../../modules/user/runtimes/java8.nix
     ../../modules/user/runtimes/java17.nix
     ../../modules/user/runtimes/java21.nix
@@ -22,7 +30,7 @@
     ../../modules/user/runtimes/nodejs.nix
     ../../modules/user/runtimes/python313.nix
     ../../modules/user/app/abdm.nix
-#   ../../modules/user/app/alacritty.nix
+    #   ../../modules/user/app/alacritty.nix
     ../../modules/user/app/chrome.nix
     ../../modules/user/app/codex.nix
     ../../modules/user/app/cli-tools.nix
@@ -101,7 +109,7 @@
     platformTheme.name = "qtct";
   };
 
-  home.packages = with pkgs;[
+  home.packages = with pkgs; [
     libsForQt5.qt5ct
     kdePackages.qt6ct
   ];

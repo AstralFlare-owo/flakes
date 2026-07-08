@@ -15,6 +15,13 @@
     unzip
     xclip
     wl-clipboard
+    file
+    binwalk
+    exiftool
+    unixtools.xxd
+    ouch
+    mediainfo
+    just
   ];
 
   programs.fzf = {

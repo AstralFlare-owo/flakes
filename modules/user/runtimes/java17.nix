@@ -30,7 +30,8 @@ let
     "rmiregistry"
     "serialver"
   ];
-  wrappers = map (bin:
+  wrappers = map (
+    bin:
     pkgs.writeShellScriptBin "${bin}17" ''
       exec ${jdk}/bin/${bin} "$@"
     ''

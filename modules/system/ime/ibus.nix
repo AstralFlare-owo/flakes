@@ -4,7 +4,7 @@
     type = "ibus";
     ibus.engines = with pkgs.ibus-engines; [
       (rime.override {
-        rimeDataPkgs = with pkgs;[
+        rimeDataPkgs = with pkgs; [
           rime-ice
         ];
       })

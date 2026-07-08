@@ -1,11 +1,11 @@
 { pkgs, ... }: {
   programs.obs-studio = {
     enable = true;
-    package = with pkgs; (
-      obs-studio.override {
+    package =
+      with pkgs;
+      (obs-studio.override {
         cudaSupport = true;
-      }
-    );
+      });
     enableVirtualCamera = true;
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs

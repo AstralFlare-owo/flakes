@@ -1,6 +1,6 @@
 { pkgs, ... }: {
-    home.packages = with pkgs; [
-        vlc
-        vlc-bittorrent
-    ];
+  home.packages = with pkgs; [
+    vlc
+    vlc-bittorrent
+  ];
 }

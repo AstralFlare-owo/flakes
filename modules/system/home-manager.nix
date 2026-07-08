@@ -4,7 +4,10 @@
     useUserPackages = true;
     backupFileExtension = "bak";
     overwriteBackup = true;
-    extraSpecialArgs = { inherit inputs; afDevice = afDevice; };
+    extraSpecialArgs = {
+      inherit inputs;
+      afDevice = afDevice;
+    };
     users.deepslate = import ../../home/deepslate;
   };
 }

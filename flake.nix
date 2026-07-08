@@ -27,7 +27,10 @@
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
     ];
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 
   inputs = {
@@ -42,12 +45,12 @@
 
     # NixOS Hardware Configurations
     nixos-hardware = {
-        # [ghfast.top Mirror]
-        url = "git+https://ghfast.top/https://github.com/NixOS/nixos-hardware.git?shallow=1";
-        # [Github]
-        # url = "git+https://github.com/NixOS/nixos-hardware.git?shallow=1";
-        
-        inputs.nixpkgs.follows = "nixpkgs";
+      # [ghfast.top Mirror]
+      url = "git+https://ghfast.top/https://github.com/NixOS/nixos-hardware.git?shallow=1";
+      # [Github]
+      # url = "git+https://github.com/NixOS/nixos-hardware.git?shallow=1";
+
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Nix User Repository
@@ -106,44 +109,56 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, nur, home-manager, ...}@inputs:
-  let
-    specialArgs = { inherit inputs; };
-  in {
-    nixosModules = {
-      nur = { ... }: {
-        nixpkgs.overlays = [
-          inputs.nur.overlays.default
-        ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixos-hardware,
+      nur,
+      home-manager,
+      ...
+    }@inputs:
+    let
+      specialArgs = { inherit inputs; };
+    in
+    {
+      nixosModules = {
+        nur = { ... }: {
+          nixpkgs.overlays = [
+            inputs.nur.overlays.default
+          ];
+        };
+        nixpkgs = { ... }: {
+          nixpkgs.config.allowUnfree = true;
+          nixpkgs.overlays = [
+            (final: prev: {
+              openldap =
+                if prev.stdenv.hostPlatform.system == "i686-linux" then
+                  prev.openldap.overrideAttrs (old: {
+                    doCheck = false;
+                    doInstallCheck = false;
+                  })
+                else
+                  prev.openldap;
+            })
+          ];
+        };
       };
-      nixpkgs = { ... }: {
-        nixpkgs.config.allowUnfree = true;
-        nixpkgs.overlays = [
-          (final: prev: {
-            openldap = if prev.stdenv.hostPlatform.system == "i686-linux" then
-              prev.openldap.overrideAttrs (old: {
-                doCheck = false;
-                doInstallCheck = false;
-              })
-            else
-              prev.openldap;
-          })
-        ];
-      };
-    };
 
-    nixosConfigurations = {
-      g5000 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = specialArgs // { afDevice = "aflare/g5000"; };
-        modules = [
-          self.nixosModules.nur
-          self.nixosModules.nixpkgs
-          ./hosts/g5000/configuration.nix
-          nixos-hardware.nixosModules.lenovo-legion-16irx8h
-          home-manager.nixosModules.home-manager
-        ];
+      nixosConfigurations = {
+        g5000 = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = specialArgs // {
+            afDevice = "aflare/g5000";
+          };
+          modules = [
+            self.nixosModules.nur
+            self.nixosModules.nixpkgs
+            ./hosts/g5000/configuration.nix
+            nixos-hardware.nixosModules.lenovo-legion-16irx8h
+            home-manager.nixosModules.home-manager
+          ];
+        };
       };
     };
-  };
 }

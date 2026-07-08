@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-    programs.nh = {
-        enable = true;
-    };
+  programs.nh = {
+    enable = true;
+  };
 }

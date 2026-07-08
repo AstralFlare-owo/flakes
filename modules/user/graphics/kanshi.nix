@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-    services.kanshi.enable = true;
+  services.kanshi.enable = true;
 }

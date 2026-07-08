@@ -1,7 +1,7 @@
 { inputs, ... }: {
-    imports = [
-        inputs.nur.repos.af-nur.homeModules.linuxqq-clipsync
-    ];
+  imports = [
+    inputs.nur.repos.af-nur.homeModules.linuxqq-clipsync
+  ];
 
-    services.linuxqq-clipsync.enable = true;
+  services.linuxqq-clipsync.enable = true;
 }

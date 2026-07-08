@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-    home.packages = with pkgs; [
-        splayer
-    ];
+  home.packages = with pkgs; [
+    splayer
+  ];
 }

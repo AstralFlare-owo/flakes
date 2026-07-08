@@ -1,4 +1,10 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ../../profiles/base.nix
@@ -37,7 +43,10 @@
 
   services.syncthing.user = "deepslate";
 
-  services.easytier.instances.ctmc.extraArgs = [ "--hostname" "g5000.slate" ];
+  services.easytier.instances.ctmc.extraArgs = [
+    "--hostname"
+    "g5000.slate"
+  ];
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
   system.boot.loader.kernelFile = "vmlinuz";
