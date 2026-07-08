@@ -21,7 +21,7 @@
     ../../modules/system/graphics/niri.nix
     ../../modules/system/ime/fcitx.nix
     ../../modules/system/app/obs-studio.nix
-    ../../modules/system/app/ollama.nix
+    # ../../modules/system/app/ollama.nix
     ../../modules/system/app/sunshine.nix
     ../../modules/system/app/nh.nix
     ../../modules/system/hardware/modem.nix
@@ -49,7 +49,7 @@
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
-  system.boot.loader.kernelFile = "vmlinuz";
+  # system.boot.loader.kernelFile = "vmlinuz";
 
   environment.systemPackages = with pkgs; [
     lenovo-legion
