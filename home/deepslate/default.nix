@@ -108,6 +108,17 @@
     enable = true;
   };
 
+  home.pointerCursor = {
+    enable = true;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
+  dconf.settings."org/gnome/desktop/interface" = {
+    cursor-theme = config.home.pointerCursor.name;
+    cursor-size = config.home.pointerCursor.size;
+  };
+
   qt = {
     enable = true;
     platformTheme.name = "qtct";
@@ -117,10 +128,6 @@
     libsForQt5.qt5ct
     kdePackages.qt6ct
   ];
-
-  home.sessionVariables = {
-    XCURSOR_THEME = "catppuccin-macchiato-lavender-cursors";
-  };
 
   home.file = {
     # ".zshrc".source = ./.zshrc;
