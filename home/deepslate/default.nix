@@ -104,6 +104,8 @@
     };
     accent = "lavender";
     flavor = "macchiato";
+    autoEnable = false;
+    enable = true;
   };
 
   qt = {
