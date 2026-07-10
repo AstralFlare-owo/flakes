@@ -64,6 +64,7 @@
     ../../modules/user/app/kdeconnect.nix
     ../../modules/user/app/lmstudio.nix
     ../../modules/user/app/nixfmt.nix
+    ../../modules/user/app/cherry-studio.nix
   ];
 
   services.kanshi.profiles = lib.mkIf (afDevice == "aflare/g5000") {

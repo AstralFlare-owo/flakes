@@ -15,6 +15,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
     "olm-3.2.16"
+    "pnpm-10.29.2"
   ];
 
   services.openssh.enable = true;
