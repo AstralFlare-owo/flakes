@@ -161,6 +161,7 @@
           "textColor": "none"
         },
         {
+          "defaultSettings": {},
           "id": "plugin:kde-connect"
         },
         {
@@ -256,8 +257,8 @@
     "telemetryEnabled": true,
     "enableLockScreenCountdown": true,
     "lockScreenCountdownDuration": 10000,
-    "autoStartAuth": true,
-    "allowPasswordWithFprintd": true,
+    "autoStartAuth": false,
+    "allowPasswordWithFprintd": false,
     "clockStyle": "digital",
     "clockFormat": "HH:mm:ss\\nyyyy-MM-dd ",
     "passwordChars": true,

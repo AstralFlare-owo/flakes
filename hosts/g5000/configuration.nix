@@ -26,7 +26,7 @@
     ../../modules/system/app/nh.nix
     ../../modules/system/hardware/modem.nix
     ../../modules/system/app/nix-keep-drv.nix
-    ../../modules/system/hardware/fprintd.nix
+    # ../../modules/system/hardware/fprintd.nix
   ];
 
   hardware.nvidia.prime.offload = {
