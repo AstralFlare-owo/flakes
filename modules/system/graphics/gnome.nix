@@ -57,4 +57,8 @@
     gsettings-desktop-schemas
     file-roller
   ];
+
+  environment.sessionVariables = {
+    GTK_USE_PORTAL = "1";
+  };
 }
