@@ -1,6 +1,9 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     nodejs
-    pnpm-shell-completion
+    pnpm
   ];
+
+  programs.bun.enable = true;
+  programs.npm.enable = true;
 }
