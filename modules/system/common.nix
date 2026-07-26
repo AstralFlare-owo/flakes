@@ -178,6 +178,68 @@
   ];
 
   fonts.fontconfig = {
+    localConf = ''
+      <?xml version="1.0"?>
+      <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+      <fontconfig>
+      <!-- Keep Adwaita Sans glyphs and use the Noto sans chain afterwards. -->
+      <alias binding="strong">
+        <family>Adwaita Sans</family>
+        <prefer>
+          <family>Adwaita Sans</family>
+          <family>Noto Sans</family>
+          <family>Noto Sans CJK SC</family>
+          <family>Noto Color Emoji</family>
+        </prefer>
+      </alias>
+
+      <alias binding="strong">
+        <family>ui-sans-serif</family>
+        <prefer>
+          <family>Noto Sans</family>
+          <family>Noto Sans CJK SC</family>
+          <family>Noto Color Emoji</family>
+        </prefer>
+      </alias>
+      <alias binding="strong">
+        <family>ui-serif</family>
+        <prefer>
+          <family>Noto Serif</family>
+          <family>Noto Serif CJK SC</family>
+          <family>Noto Color Emoji</family>
+        </prefer>
+      </alias>
+      <alias binding="strong">
+        <family>ui-monospace</family>
+        <prefer>
+          <family>Maple Mono NF CN</family>
+          <family>Noto Color Emoji</family>
+        </prefer>
+      </alias>
+      <alias binding="strong">
+        <family>ui-emoji</family>
+        <prefer>
+          <family>Noto Color Emoji</family>
+        </prefer>
+      </alias>
+
+      <!-- Remove Korean CJK faces without rejecting the shared TTC files. -->
+      <selectfont>
+        <rejectfont>
+          <pattern>
+            <patelt name="family"><string>Noto Sans CJK KR</string></patelt>
+          </pattern>
+          <pattern>
+            <patelt name="family"><string>Noto Sans Mono CJK KR</string></patelt>
+          </pattern>
+          <pattern>
+            <patelt name="family"><string>Noto Serif CJK KR</string></patelt>
+          </pattern>
+        </rejectfont>
+      </selectfont>
+      </fontconfig>
+    '';
+
     defaultFonts = {
       serif = [
         "Noto Serif"
