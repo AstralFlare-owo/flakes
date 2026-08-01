@@ -3,4 +3,5 @@
     python313
     inputs.fix-python.packages.${pkgs.system}.default
   ];
+  programs.uv.enable = true;
 }
