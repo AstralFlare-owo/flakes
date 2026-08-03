@@ -14,18 +14,19 @@
     extra-substituters = [
       # [Cachix Cache]
       "https://af-nur.cachix.org"
-      "https://claude-code-nix.cachix.org"
       "https://nix-community.cachix.org"
       "https://devenv.cachix.org"
+      # [Numtide Cache]
+      "https://cache.numtide.com"
     ];
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     ];
     extra-trusted-public-keys = [
       "af-nur.cachix.org-1:687IgiHqfOdqzW/AXQGtoKO7PH5Tx3kbCRn7XODV17M="
-      "claude-code-nix.cachix.org-1:VzA1HW3CkJnuSQaPE1t7OfSaleacUnO19VrZ3hJFH+0="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+      "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
     ];
     experimental-features = [
       "nix-command"
@@ -92,13 +93,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Claude Code
-    claude-code = {
+    # Claude Code (使用 nixpkgs 内置包，故不再引入独立源)
+
+    # LLM Agents (oh-my-pi)
+    llm-agents = {
       # [ghfast.top Mirror]
-      url = "git+https://ghfast.top/https://github.com/sadjow/claude-code-nix.git?shallow=1";
+      url = "git+https://ghfast.top/https://github.com/numtide/llm-agents.nix.git?shallow=1";
       # [Github]
-      # url = "git+https://github.com/sadjow/claude-code-nix.git?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # url = "git+https://github.com/numtide/llm-agents.nix.git?shallow=1";
     };
 
     catppuccin = {

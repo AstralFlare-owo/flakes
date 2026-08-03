@@ -55,6 +55,7 @@
     ../../modules/user/graphics/noctalia-shell.nix
     ../../modules/user/graphics/kanshi.nix
     ../../modules/user/app/opencode.nix
+    ../../modules/user/app/omp.nix
     ../../modules/user/app/nix-unsafe.nix
     ../../modules/user/app/vlc.nix
     ../../modules/user/app/satty.nix
