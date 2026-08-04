@@ -29,6 +29,7 @@
     ../../modules/user/runtimes/gcc.nix
     ../../modules/user/runtimes/nodejs.nix
     ../../modules/user/runtimes/python313.nix
+    ../../modules/user/runtimes/go.nix
     ../../modules/user/app/abdm.nix
     #   ../../modules/user/app/alacritty.nix
     ../../modules/user/app/chrome.nix
