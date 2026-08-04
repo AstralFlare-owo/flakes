@@ -20,6 +20,7 @@
     ./alacritty.nix
     ./kitty.nix
     ./btop.nix
+    ./tmux.nix
     #   ../../modules/user/graphics/mako.nix
     ../../modules/user/graphics/ozone-platform-hint-fix.nix
     #   ../../modules/user/graphics/waybar.nix

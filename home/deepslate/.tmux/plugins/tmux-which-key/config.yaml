@@ -1,0 +1,294 @@
+# yaml-language-server: $schema=config.schema.yaml
+command_alias_start_index: 200
+keybindings:
+  # root_table: C-Space
+  prefix_table: Space
+title:
+  style: align=centre,bold
+  prefix: tmux
+  prefix_style: fg=green,align=centre,bold
+position:
+  x: R
+  y: P
+custom_variables:
+  - name: log_info
+    value: '#[fg=green,italics] [info]#[default]#[italics]'
+macros:
+  - name: reload-config
+    commands:
+      - display "#{log_info} Loading config... "
+      - source-file $HOME/.tmux.conf
+      - display -p "\n\n... Press ENTER to continue"
+  - name: restart-pane
+    commands:
+      - display "#{log_info} Restarting pane"
+      - 'respawnp -k -c #{pane_current_path}'
+items:
+  - name: Tmux命令ovo
+    key: space
+    command: command-prompt
+  - name: 滚回到上一窗口！
+    key: tab
+    command: last-window
+  - name: 滚回到上一面板！
+    key: '`'
+    command: last-pane
+  - separator: true
+  - name: + 窗口
+    key: w
+    menu:
+      - name: 刚刚那个——
+        key: tab
+        command: last-window
+      - name: 让咱来挑一个幸运窗口w
+        key: w
+        command: choose-tree -Zw
+      - name: 上一个w
+        key: p
+        command: previous-window
+      - name: 下一个w
+        key: n
+        command: next-window
+      - name: 新建窗口
+        key: c
+        command: 'neww -c #{pane_current_path}'
+      - separator: true
+      - name: + 摆盘来的
+        key: l
+        menu:
+          - name: 不好看，换下一个w
+            key: l
+            command: nextl
+            transient: true
+          - name: 全部铺开！
+            key: t
+            command: selectnl tiled
+          - name: 水平
+            key: h
+            command: selectl even-horizontal
+          - name: 垂直
+            key: v
+            command: selectl even-vertical
+          - name: 水平主窗
+            key: H
+            command: selectl main-horizontal
+          - name: 垂直主窗
+            key: V
+            command: selectl main-vertical
+      - name: 竖斩窗口老冯
+        key: /
+        command: 'splitw -h -c #{pane_current_path}'
+      - name: 横斩窗口老冯
+        key: '-'
+        command: 'splitw -v -c #{pane_current_path}'
+      - name: 转起来了！
+        key: o
+        command: rotatew
+        transient: true
+      - name: 反转了！
+        key: O
+        command: rotatew -D
+        transient: true
+      - separator: true
+      - name: 改名换姓！
+        key: R
+        command: command-prompt -p "Rename window:" -I "#W" "renamew -- \"%%\""
+      - name: 怎么办？只有杀！
+        key: X
+        command: 'confirm -p "Kill window #W? (y/n)" killw'
+  - name: + 面板
+    key: p
+    menu:
+      - name: 刚刚那个刚刚那个！
+        key: tab
+        command: lastp
+      - name: 让咱来挑选一个幸运面板w
+        key: p
+        command: displayp -d 0
+      - separator: true
+      - name: 左移
+        key: h
+        command: selectp -L
+      - name: 下移
+        key: j
+        command: selectp -D
+      - name: 上移
+        key: k
+        command: selectp -U
+      - name: 右移
+        key: l
+        command: selectp -R
+      - separator: true
+      - name: 缩放大小
+        key: z
+        command: resizep -Z
+      - name: + 调整大小
+        key: r
+        menu:
+          - name: 左扩
+            key: h
+            command: resizep -L
+            transient: true
+          - name: 下扩
+            key: j
+            command: resizep -D
+            transient: true
+          - name: 上扩
+            key: k
+            command: resizep -U
+            transient: true
+          - name: 右扩
+            key: l
+            command: resizep -R
+            transient: true
+          - name: 左扩 x10
+            key: H
+            command: resizep -L 10
+            transient: true
+          - name: 下扩 x10
+            key: J
+            command: resizep -D 10
+            transient: true
+          - name: 上扩 x10
+            key: K
+            command: resizep -U 10
+            transient: true
+          - name: 右扩 x10
+            key: L
+            command: resizep -R 10
+            transient: true
+      - name: 向左交换
+        key: H
+        command: swapp -t "{left-of}"
+      - name: 向下交换
+        key: J
+        command: swapp -t "{down-of}"
+      - name: 向上交换
+        key: K
+        command: swapp -t "{up-of}"
+      - name: 向右交换
+        key: L
+        command: swapp -t "{right-of}"
+      - name: 拎走！
+        key: '!'
+        command: break-pane
+      - separator: true
+      - name: 标记了一处地点
+        key: m
+        command: selectp -m
+      - name: 取消标记
+        key: M
+        command: selectp -M
+      - name: 截图！
+        key: C
+        command: capture-pane
+      - name: 怎么似了……重启一下吧
+        key: R
+        macro: restart-pane
+      - name: 杀杀杀！
+        key: X
+        command: 'confirm -p "Kill pane #P? (y/n)" killp'
+  - name: + 剪贴板……
+    key: c
+    menu:
+      - name: 复制！
+        key: c
+        command: copy-mode
+      - separator: true
+      - name: 挑一个用叭
+        key: b
+        command: choose-buffer -Z
+      - name: 看看有啥👀
+        key: l
+        command: lsb
+      - name: 粘！
+        key: p
+        command: pasteb
+  - name: + 会话
+    key: s
+    menu:
+      - name: 挑一个继续聊w
+        key: s
+        command: choose-tree -Zs
+      - name: 新的开始！
+        key: N
+        command: new
+      - name: 改名。
+        key: r
+        command: command-prompt -p "Rename session:" -I "#S" "rename-session -- \"%%\""
+  - name: + 插件功能
+    key: P
+    menu:
+      - name: Fzf 启动器
+        key: f
+        command: >-
+          run-shell -b "TMUX_FZF_CLIENT=#{client_tty} /home/deepslate/.tmux/plugins/tmux-fzf/main.sh"
+      - separator: true
+      - name: 浮动终端 (M-i)
+        key: i
+        command: >-
+          if-shell -F "#{==:#S,floating}" { detach-client } { set-option -Fg @last_session_name "#S" ; display-popup -E -d "#{pane_current_path}" -h "70%" -w "70%" -x C -y C "tmux new -A -s floating" }
+      - name: 转为当前窗口 (M-h)
+        key: h
+        command: >-
+          if-shell -F "#{==:#S,floating}" { break-pane } { run-shell "bash -c \"tmux break-pane -d -s floating -t \"$(tmux show -gvq @last_session_name):\"\"" }
+      - name: 转为下个窗口 (M-l)
+        key: l
+        command: >-
+          if-shell -F "#{==:#S,floating}" { break-pane -d } { run-shell "bash -c \"tmux break-pane -s floating -t \"$(tmux show -gvq @last_session_name):\"\"" }
+      - name: 面板转浮动 (M-m)
+        key: m
+        command: >-
+          if-shell -F "#{==:#S,floating}" { select-pane -m ; display-popup -E -d "#{pane_current_path}" -h "70%" -w "70%" -x C -y C "tmux new -A -s floating tmux join-pane" }
+      - separator: true
+      - name: 安装插件
+        key: I
+        command: run-shell $TMUX_PLUGIN_MANAGER_PATH/tpm/bindings/install_plugins
+      - name: 更新插件
+        key: u
+        command: run-shell $TMUX_PLUGIN_MANAGER_PATH/tpm/bindings/update_plugins
+      - name: 清理插件
+        key: c
+        command: run-shell $TMUX_PLUGIN_MANAGER_PATH/tpm/bindings/clean_plugins
+  - name: + 客户端
+    key: C
+    menu:
+      - name: 选择客户端
+        key: c
+        command: choose-client -Z
+      - name: 刚刚那个w
+        key: l
+        command: switchc -l
+      - name: 上一个……
+        key: p
+        command: switchc -p
+      - name: 下一个……
+        key: n
+        command: switchc -n
+      - separator: true
+      - name: 刷新
+        key: R
+        command: refresh
+      - name: 润了喵……
+        key: D
+        command: detach
+      - name: 去后台！
+        key: Z
+        command: suspendc
+      - separator: true
+      - name: 改了点东西w 更新一下
+        key: r
+        macro: reload-config
+      - name: 自定义
+        key: ','
+        command: customize-mode -Z
+  - separator: true
+  - name: 时钟
+    key: T
+    command: clock-mode
+  - name: 显示消息
+    key: '~'
+    command: show-messages
+  - name: 啊唔！咱忘记快捷键了……
+    key: '?'
+    command: list-keys -N
