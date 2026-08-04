@@ -64,6 +64,8 @@
     ../../modules/user/app/direnv.nix
     ../../modules/user/app/kdeconnect.nix
     ../../modules/user/app/lmstudio.nix
+    ../../modules/user/app/mpv.nix
+    ../../modules/user/app/ffmpeg.nix
     ../../modules/user/app/nixfmt.nix
     ../../modules/user/app/cherry-studio.nix
   ];
