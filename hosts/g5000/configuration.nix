@@ -14,6 +14,7 @@
     ../../modules/system/graphics/plymouth.nix
     ../../modules/system/app/clash-verge-rev.nix
     ../../modules/system/app/easytier.nix
+    ../../modules/system/app/mission-center.nix
     ../../modules/system/virtualisation/kvm.nix
     ../../modules/system/app/steam.nix
     ../../modules/system/app/syncthing.nix
