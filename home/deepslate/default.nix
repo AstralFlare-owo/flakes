@@ -34,7 +34,7 @@
     ../../modules/user/app/abdm.nix
     #   ../../modules/user/app/alacritty.nix
     ../../modules/user/app/chrome.nix
-    ../../modules/user/app/codex.nix
+    # ../../modules/user/app/codex.nix
     ../../modules/user/app/cli-tools.nix
     ../../modules/user/app/dingtalk.nix
     ../../modules/user/app/hmcl.nix
@@ -56,7 +56,7 @@
     ../../modules/user/app/musicfox.nix
     ../../modules/user/graphics/noctalia-shell.nix
     ../../modules/user/graphics/kanshi.nix
-    ../../modules/user/app/opencode.nix
+    # ../../modules/user/app/opencode.nix
     ../../modules/user/app/omp.nix
     ../../modules/user/app/nix-unsafe.nix
     ../../modules/user/app/vlc.nix
