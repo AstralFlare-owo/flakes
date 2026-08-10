@@ -1,4 +1,9 @@
-{ inputs, lib, pkgs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 {
   imports = [
     inputs.dms.nixosModules.dank-material-shell
@@ -23,6 +28,14 @@
     # Sync deepslate 的 DMS 主题/壁纸到 greeter
     configHome = "/home/deepslate";
   };
+
+  # greetd 用 `sh -c` 启动用户会话（如 niri-session、gnome-session），
+  # PATH 由 systemd.services.greetd.path 决定（serviceConfig.PATH 会被忽略），
+  # 默认只有 coreutils 等，会话命令 not found 导致登录即退回 greeter
+  systemd.services.greetd.path = [
+    "/run/current-system/sw" # 提供 niri-session、gnome-session 等会话命令
+    pkgs.bash # greetd 通过 PATH 查找 sh
+  ];
 
   # greetd 默认以 "greeter" 用户运行 greeter，dank-greeter 模块断言该用户必须存在
   users.users.greeter = {
