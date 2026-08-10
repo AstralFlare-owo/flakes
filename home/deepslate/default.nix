@@ -16,7 +16,7 @@
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     ./niri.nix
-    ./noctalia.nix
+    # ./noctalia.nix
     ./alacritty.nix
     ./kitty.nix
     ./btop.nix
@@ -54,7 +54,7 @@
     ../../modules/user/app/wpsoffice.nix
     ../../modules/user/app/zsh.nix
     ../../modules/user/app/musicfox.nix
-    ../../modules/user/graphics/noctalia-shell.nix
+    # ../../modules/user/graphics/noctalia-shell.nix
     ../../modules/user/graphics/kanshi.nix
     # ../../modules/user/app/opencode.nix
     ../../modules/user/app/omp.nix
