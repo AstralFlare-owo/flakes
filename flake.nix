@@ -109,6 +109,26 @@
       # url = "git+https://github.com/catppuccin/nix.git?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Dank Material Shell
+    dms = {
+      # [Github]
+      url = "github:AvengeMedia/DankMaterialShell";
+      # [ghfast.top Mirror]
+      # url = "git+https://ghfast.top/https://github.com/AvengeMedia/DankMaterialShell.git?shallow=1";
+
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # DMS Greeter
+    dank-greeter = {
+      # [Github]
+      url = "github:AvengeMedia/dank-greeter";
+      # [ghfast.top Mirror]
+      # url = "git+https://ghfast.top/https://github.com/AvengeMedia/dank-greeter.git?shallow=1";
+
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
