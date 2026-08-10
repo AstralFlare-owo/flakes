@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, lib, pkgs, ... }:
 {
   imports = [
     inputs.dms.nixosModules.dank-material-shell
@@ -12,6 +12,11 @@
   };
 
   # DMS Greeter（来自 github:AvengeMedia/dank-greeter flake）
+  # 接管显示管理器：禁用 GDM，避免与 greetd 争抢 display-manager.service 和 VT1
+  # （gnome.nix 启用的 GDM 会占住 display-manager 别名，导致 greetd 无法成为
+  # 启动目标，plymouth-quit-wait 继续等待 GDM 而卡在开机画面）
+  services.displayManager.gdm.enable = lib.mkForce false;
+
   programs.dms-greeter = {
     enable = true;
     compositor.name = "niri";
