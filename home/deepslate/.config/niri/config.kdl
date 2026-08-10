@@ -134,9 +134,9 @@ window-rule {
     draw-border-with-background false
 }
 
-// Set the overview wallpaper on the backdrop.
+// Set wallpapers/overview layers (niri wallpaper, DMS, noctalia) on the backdrop.
 layer-rule {
-    match namespace="^noctalia-overview*"
+    match namespace="^(wallpaper|dms:blurwallpaper|dms:overview|noctalia-overview)"
     place-within-backdrop true
 }
 
