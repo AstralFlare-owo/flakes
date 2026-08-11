@@ -45,4 +45,7 @@
     shell = pkgs.bash;
   };
   users.groups.greeter = { };
+  environment.systemPackages = with pkgs; [
+    ccal
+  ];
 }
