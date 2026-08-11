@@ -5,6 +5,7 @@
   };
 
   home.file = {
-    ".tmux/plugins/tmux-which-key/config.yaml".source = ./.tmux/plugins/tmux-which-key/config.yaml;
+    ".config/tmux/plugins/tmux-which-key/config.yaml".source =
+      ./.tmux/plugins/tmux-which-key/config.yaml;
   };
 }
