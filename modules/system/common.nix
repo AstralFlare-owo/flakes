@@ -8,10 +8,16 @@
 
   networking.networkmanager.enable = true;
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    substituters = (import ../../flake.nix).nixConfig.substituters;
+    extra-substituters = (import ../../flake.nix).nixConfig.extra-substituters;
+    trusted-public-keys = (import ../../flake.nix).nixConfig.trusted-public-keys;
+    extra-trusted-public-keys = (import ../../flake.nix).nixConfig.extra-trusted-public-keys;
+  };
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
     "olm-3.2.16"

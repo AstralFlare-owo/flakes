@@ -154,6 +154,9 @@
           nixpkgs.config.allowUnfree = true;
           nixpkgs.overlays = [
             (final: prev: {
+              openssl_1_1 = (prev.callPackage ./overlays/openssl-1.1/default.nix { }).openssl_1_1;
+            })
+            (final: prev: {
               openldap =
                 if prev.stdenv.hostPlatform.system == "i686-linux" then
                   prev.openldap.overrideAttrs (old: {
