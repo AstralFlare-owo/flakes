@@ -144,4 +144,12 @@
     ".config/waybar/style.css".source = ./.config/waybar/style.css;
     ".local/share/fonts".source = ./fonts;
   };
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3;
+    };
+  };
 }
