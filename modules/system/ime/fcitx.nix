@@ -1,4 +1,15 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+
+let
+  rimeUserConfig = ''
+    patch:
+      __include: rime_ice_suggestion:/
+
+      schema_list:
+        - schema: rime_ice
+  '';
+in
+{
   environment.systemPackages = [
     pkgs.gnomeExtensions.kimpanel
   ];
@@ -66,4 +77,14 @@
   #   };
   #   wantedBy = [ "default.target" ];
   # };
+
+  # Deploy rime-ice user config into every home-manager-managed user's
+  # ~/.local/share/fcitx5/rime
+  home-manager.sharedModules = [
+    {
+      home.file.".local/share/fcitx5/rime/default.custom.yaml" = {
+        text = rimeUserConfig;
+      };
+    }
+  ];
 }

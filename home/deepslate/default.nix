@@ -45,6 +45,7 @@
     ../../modules/user/app/localsend.nix
     ../../modules/user/app/piliplus.nix
     ../../modules/user/app/protonplus.nix
+    ../../modules/user/app/remmina.nix
     ../../modules/user/app/snipaste.nix
     ../../modules/user/app/sub-store.nix
     ../../modules/user/app/telegram.nix
